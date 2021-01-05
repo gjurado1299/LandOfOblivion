@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2886129034198321376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2886129034198321378}
+  - component: {fileID: 2886129034198321379}
+  m_Layer: 0
+  m_Name: QuestGiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2886129034198321378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886129034198321376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 91.44822, y: 7.193928, z: 154.08736}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2886129034198321379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886129034198321376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771f12935daba45459e58f70838e30be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest:
+    isActive: 0
+    title: EL ANILLO PA CUANDO
+    description: "Estoy cansado y perdido, tendr\xE9 que encontrar el anillo de \xE9ste
+      aldeano para poder recuperarme en el poblado."
+    experienceReward: 500
+    goldReward: 50
+    itemReward: {fileID: 11400000, guid: 9945c0708a491024585c804f68030d5e, type: 2}
+    dialogueTrigger:
+      firstDialogue:
+        inicioMision: 1
+        helper: 0
+        sentences:
+        - "\xA1\xBFD\xF3nde lo habr\xE9 puesto?! \xA1Maldita sea!"
+        - "Ho... \xBFHola?\xBFD\xF3nde estoy?"
+        - "\xA1Vaya! Un viajero nuevo, \xA1Bienvenido a Bibury! O mejor dicho...
+          a su entrada!"
+        - "\xBFEn qu\xE9 tierras?"
+        - "\xBFComo que en qu\xE9 tierras? Pues las \xFAnicas que existen, caramba!"
+        - "\xBFC\xF3mo?"
+        - "Veo que est\xE1s muy perdido, y adem\xE1s se te ve agotado, lleguemos
+          a un acuerdo..."
+        - "He perdido mi anillo... es un objeto muy importante para mi... \xA1Y m\xE1s
+          a\xFAn para mi mujer!"
+        - "Encu\xE9ntrame el anillo, joven, y te dar\xE9 cobijo en el pueblo."
+        - De acuerdo.
+        names:
+        - Desconocido
+        - Havook
+        - Desconocido
+        - Havook
+        - Desconocido
+        - Havook
+        - Desconocido
+        - Desconocido
+        - Desconocido
+        - Havook
+      helper:
+        inicioMision: 0
+        helper: 1
+        sentences:
+        - Hola
+        - "Hola, \xBFqu\xE9 tal?"
+        - Bien, bien...
+        - "\xBFMi anillo?"
+        - "\xBFC\xF3mo dices?"
+        - "El anillo de mi mujer, \xBFLo has encontrado?"
+        - Ah, de momento no.
+        - ...
+        - "Y... \xBFVas a buscarlo?"
+        - "\xA1Ah s\xED, ahora vuelvo!"
+        - Vaya con el aventurero...
+        names:
+        - Havook
+        - Desconocido
+        - Havook
+        - Desconocido
+        - Havook
+        - Desconocido
+        - Havook
+        - ' '
+        - Desconocido
+        - Havook
+        - Desconocido
+      endingDialogue:
+        inicioMision: 0
+        helper: 0
+        sentences:
+        - "Eh... Hola, no veo tu anillo por ning\xFAn lado, pero he encontrado \xE9sto."
+        - "\xA1Caramba, qu\xE9 reliquia!"
+        - "A mi mujer no le har\xE1 ninguna gracia lo del anillo... pero gracias
+          a \xE9sto quiz\xE1 podr\xE9 dormir en mi hogar."
+        - "Ven, entraremos al pueblo... Ah y toma, he encontrado \xE9sta daga, te
+          har\xE1 falta."
+        - "\xBFC\xF3mo?"
+        - "T\xFA sigueme..."
+        names:
+        - Havook
+        - Desconocido
+        - Desconocido
+        - Desconocido
+        - Havook
+        - Desconocido
+    goal:
+      goalType: 1
+      requiredAmount: 1
+      currentAmount: 0
+  player: {fileID: 0}
+  questWindow: {fileID: 0}
+  titleText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  goldText: {fileID: 0}
+  experienceText: {fileID: 0}
+  dialogueManager: {fileID: 0}
+  rewardWindow: {fileID: 0}
+  goldReward: {fileID: 0}
+  expReward: {fileID: 0}
+  titleTextReward: {fileID: 0}
+  itemName: {fileID: 0}
+  itemImage: {fileID: 0}
