@@ -6,7 +6,8 @@ public class Slot: MonoBehaviour
     public Image icon;
     public Button removeButton;
 
-    Item item;
+    [HideInInspector]
+    public Item item;
 
     public void AddItem(Item newItem)
     {

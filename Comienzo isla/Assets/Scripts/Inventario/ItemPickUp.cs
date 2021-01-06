@@ -6,14 +6,6 @@ public class ItemPickUp : MonoBehaviour
 {
     public Item item;
     public int bodyPart;
-    bool hasBeenPicked = false;
-
-    GameManager gm;
-
-    void Update(){
-        if(gm == null)
-            gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-    }
     
     public void PickUp()
     {
@@ -21,12 +13,6 @@ public class ItemPickUp : MonoBehaviour
         bool wasPickedUp = Inventario.instance.Add(item);
 
         if(wasPickedUp){
-                
-            if(hasBeenPicked == false){
-                gm.ActivateInfo(item.infoPick);
-                hasBeenPicked = true;
-            }
-
             // Enparentamos la parte del cuerpo
             if(item.GetType() == typeof(Equipment)){
                 gameObject.transform.SetParent(EquipmentManager.instance.bodyParts[bodyPart].transform);

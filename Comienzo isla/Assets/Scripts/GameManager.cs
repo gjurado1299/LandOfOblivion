@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
     GameObject inventarioUI;
     public GameObject pauseUI;
     public Animator animatorPlayer;
+
     public GameObject InfoPanel;
+    public TextMeshProUGUI infoText;
+    public TextMeshProUGUI damageText;
+    public TextMeshProUGUI protectionText;
+
     public bool bloqueado = false;
 
     // Start is called before the first frame update
@@ -67,12 +72,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ActivateInfo(string text){
-        InfoPanel.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = text;
+    public void EmptyInfo(){
         CanvasGroup cg = InfoPanel.GetComponent<CanvasGroup>();
-        cg.alpha = 1;
-        cg.interactable = true;
-        InfoPanel.GetComponent<Animator>().SetTrigger("Open");
+        cg.alpha = 0;
+    }
+
+    public void ActivateInfo(Slot slot){
+        string damage;
+        string protection;
+        if(slot.item != null){
+            InfoPanel.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = slot.item.infoPick;
+            if(slot.item.GetType() == typeof(Equipment)){
+                damage = ((Equipment)slot.item).damageModifier.ToString();
+                protection = ((Equipment)slot.item).blockModifier.ToString();
+            }else{
+                damage = "-";
+                protection = "-";
+            }
+
+            InfoPanel.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().text = protection;
+            InfoPanel.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().text = protection;
+            CanvasGroup cg = InfoPanel.GetComponent<CanvasGroup>();
+            cg.alpha = 1;
+        }
     }
 
     public bool ActivePanels(){

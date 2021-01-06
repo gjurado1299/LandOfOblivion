@@ -4,6 +4,7 @@ public class InventarioUI : MonoBehaviour
 {
     public Transform itemsParent;
     Inventario inventario;
+    GameManager gm;
     Slot[] slots;
     CanvasGroup c;
 
@@ -37,6 +38,10 @@ public class InventarioUI : MonoBehaviour
 
     public void UpdateUI()
     {
+
+        if(gm == null)
+            gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         if(slots != null){
             for (int i = 0; i < slots.Length; i++)
             {
@@ -50,5 +55,7 @@ public class InventarioUI : MonoBehaviour
             }
         }
 
+        if(inventario.items.Count == 0)
+            gm.EmptyInfo();
     }
 }

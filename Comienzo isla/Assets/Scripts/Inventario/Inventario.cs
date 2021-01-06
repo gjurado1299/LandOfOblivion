@@ -12,8 +12,7 @@ public class Inventario : MonoBehaviour
     public List<Item> items = new List<Item>();
 
     public animationStateController animacion;
-    GameManager gm;
-
+    
     #region Singleton
 
     public static Inventario instance;
@@ -38,14 +37,11 @@ public class Inventario : MonoBehaviour
         if(animacion == null)
             animacion = GameObject.FindWithTag("Player").GetComponent<animationStateController>();
         
-        if(gm == null)
-            gm = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         if(!item.isDefaultItem)
         {
             if(items.Count >= space)
             {
-                gm.ActivateInfo("No hay suficiente espacio en el inventario.");
                 Debug.Log("No hay suficiente espacio en el inventario.");
                 animacion.sinEspacio = true;
                 return false;
