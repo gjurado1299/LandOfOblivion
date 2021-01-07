@@ -111,6 +111,8 @@
      <Compile Include="Assets\Scripts\Inventario\Slot.cs" />
      <Compile Include="Assets\Scripts\LevelLoader.cs" />
      <Compile Include="Assets\Scripts\MovimientoTerceraPersona.cs" />
+     <Compile Include="Assets\Scripts\Oleadas\Timer.cs" />
+     <Compile Include="Assets\Scripts\Oleadas\WaveManager.cs" />
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Quests\Quest.cs" />
@@ -737,6 +739,9 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -754,6 +759,12 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
