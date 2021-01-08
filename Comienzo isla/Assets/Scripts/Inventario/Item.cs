@@ -23,6 +23,7 @@ public class Item : ScriptableObject
         Inventario.instance.Remove(this);
     }
 
+
     public void SetPlayerPrefs(){
         name = PlayerPrefs.GetString("ItemRewardName", "");
         infoPick = PlayerPrefs.GetString("ItemInfoPick", "");

@@ -44,7 +44,6 @@ public class CharacterStats : MonoBehaviour
         }
 
         currentHealth -= damage;
-        Debug.Log(transform.name + " takes "+ damage + " damage.");
 
         if(OnHealthChanged != null){
             OnHealthChanged(maxHealth, currentHealth);
@@ -60,8 +59,14 @@ public class CharacterStats : MonoBehaviour
         currentHealth = health;
     }
 
+    public void IncreaseHealth(int increment){
+        currentHealth += increment;
+        if(currentHealth > maxHealth)
+            currentHealth = maxHealth;
+    }
+
     public virtual void Die(){
         // Muere
-        Debug.Log(transform.name + " ha muerto.");
+
     }
 }

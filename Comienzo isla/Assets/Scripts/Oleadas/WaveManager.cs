@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 [RequireComponent(typeof(Timer))]
@@ -15,13 +16,14 @@ public class WaveManager : MonoBehaviour
     private List<Transform> spawners = new List<Transform>();
 
     public float spawnDelay;
-
     public float roundDelay;
-
     public int enemyIncreaseFactor;
 
-    public GameObject enemy;
+    public int numberOfWaves;
 
+    public GameObject enemy;
+    public TextMeshProUGUI mainObjective;
+    public TextMeshProUGUI info;
 
     private void Start()
     {
@@ -33,22 +35,30 @@ public class WaveManager : MonoBehaviour
         {
             spawners.Add(child);
         }
+
+        timer.StartTimer(roundDelay);
     }
 
     public void StartWave()
     {
         // Si havook ha muerto, parar
-        Debug.Log("EMPEZANDO");
-        currentWave += 1;
-        Debug.Log("RONDA "+ currentWave.ToString());
-        enemiesInWave = enemyIncreaseFactor * currentWave;
-        enemiestoSpawn = enemiesInWave;
+        if(currentWave < numberOfWaves){
+            currentWave += 1;
+            
+            if(currentWave == 1){
+                mainObjective.text = "Libera la tierra de los escorpiones";
+            }
 
-        Debug.Log("ENEMIGOS "+ enemiesInWave.ToString());
-        Debug.Log("ENEMIGOS TOTALES "+ enemiestoSpawn.ToString());
-        // Actualizar mision info
+            enemiesInWave = enemyIncreaseFactor * currentWave;
+            enemiestoSpawn = enemiesInWave;
 
-        StartCoroutine(Spawn());
+            Debug.Log("ENEMIGOS TOTALES "+ enemiestoSpawn.ToString());
+            // Actualizar mision info
+
+            StartCoroutine(Spawn());
+        }else{
+            Debug.Log("MISION COMPLETADA");
+        }
     }
 
     IEnumerator Spawn()

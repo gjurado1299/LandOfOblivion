@@ -4760,7 +4760,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647750114}
-  m_LocalRotation: {x: 0.20481107, y: -0.016128091, z: 0.0033752294, w: 0.97866285}
+  m_LocalRotation: {x: 0.20481096, y: -0.016162205, z: 0.0033823685, w: 0.9786623}
   m_LocalPosition: {x: 92.48, y: 9.38, z: 139.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -17422,7 +17422,7 @@ PrefabInstance:
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.itemReward
-      value: Sword
+      value: Espada
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
@@ -18438,22 +18438,22 @@ PrefabInstance:
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20481104
+      value: 0.20481093
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0033753833
+      value: 0.0033825221
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.01612812
+      value: -0.016162232
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.97866285
+      value: 0.9786623
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -18468,7 +18468,7 @@ PrefabInstance:
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004379518
+      value: 0.000000004379521
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -18563,12 +18563,12 @@ PrefabInstance:
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000018288791
+      value: 0.000000018288794
       objectReference: {fileID: 0}
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000010463569
+      value: -0.000000010463585
       objectReference: {fileID: 0}
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -20145,7 +20145,7 @@ PrefabInstance:
     - target: {fileID: 9050477359914126845, guid: 5d18691ae8899de469e880e7d8390ab4,
         type: 3}
       propertyPath: m_Name
-      value: Sword
+      value: Espada
       objectReference: {fileID: 0}
     - target: {fileID: 9050477359914126845, guid: 5d18691ae8899de469e880e7d8390ab4,
         type: 3}

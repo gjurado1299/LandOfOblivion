@@ -43,3 +43,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25549b655fd3749329e4b6b8660af2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bodyParts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  weaponAnimations:
+  - weapon: {fileID: 11400000, guid: 4211eb60234394c2ab289db8a0bcb41f, type: 2}
+    clips:
+    - {fileID: 7400000, guid: 61f812ef422903642a93555458906a6b, type: 2}
+    - {fileID: 7400000, guid: d59ba8dfe3d643249a8bed515aeaac98, type: 2}
+  hasWeapon: 0
