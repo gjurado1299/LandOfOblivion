@@ -32,6 +32,9 @@ public class ItemPickUp : MonoBehaviour
             gameObject.SetActive(false);
 
             AudioManager.instance.Play("PickUp");
+
+            if(gameObject.name == "Llave")
+                GameObject.Find("LevelLoader").GetComponent<LevelLoader>().GoBibury();
         }
     } 
 }

@@ -4760,7 +4760,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647750114}
-  m_LocalRotation: {x: 0.20481096, y: -0.016162205, z: 0.0033823685, w: 0.9786623}
+  m_LocalRotation: {x: 0.20481569, y: -0.014729592, z: 0.0030825564, w: 0.9786849}
   m_LocalPosition: {x: 92.48, y: 9.38, z: 139.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -17439,6 +17439,11 @@ PrefabInstance:
       propertyPath: quest.nextObjective
       value: Habla con el aldeano en Bibury
       objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.started
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85353b2b890131e41be26778fbb690e9, type: 3}
 --- !u!1001 &4792509231002652693
@@ -17541,6 +17546,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.z
       value: -0.000015015088
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228359265531103735, guid: b145a948286b0bd4bb35acb749d61889,
+        type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2003330226972106760, guid: b145a948286b0bd4bb35acb749d61889,
         type: 3}
@@ -18438,37 +18448,37 @@ PrefabInstance:
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20481093
+      value: 0.20481566
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0033825221
+      value: 0.0030827108
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.016162232
+      value: -0.014729623
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9786623
+      value: 0.9786849
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.22975293
+      value: 0.22975291
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018713186
+      value: 0.000000018732216
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004379521
+      value: -0.000000004460137
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -18563,17 +18573,17 @@ PrefabInstance:
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000018288794
+      value: -0.000000015468483
       objectReference: {fileID: 0}
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000010463585
+      value: -0.00000000377898
       objectReference: {fileID: 0}
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.19424807
+      value: 0.19424808
       objectReference: {fileID: 0}
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}

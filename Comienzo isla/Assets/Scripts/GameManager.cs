@@ -32,6 +32,13 @@ public class GameManager : MonoBehaviour
             inventarioUI.SetActive(false);
         }
 
+        if(InfoPanel == null){
+            InfoPanel = inventarioUI.transform.Find("InfoPanel").GetChild(0).gameObject;
+            infoText = InfoPanel.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+            damageText = InfoPanel.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
+            protectionText = InfoPanel.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>();
+
+        }
         if(Input.GetButtonDown("Inventory") && (inventarioUI.activeSelf || bloqueado == false))
         {
             inventarioUI.SetActive(!inventarioUI.activeSelf);

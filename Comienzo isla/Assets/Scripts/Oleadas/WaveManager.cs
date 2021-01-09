@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -22,21 +22,21 @@ public class WaveManager : MonoBehaviour
     public int numberOfWaves;
 
     public GameObject enemy;
-    public TextMeshProUGUI mainObjective;
-    public TextMeshProUGUI info;
+    public GameObject keyInteractable;
+    Player havook;
 
     private void Start()
     {
         timer = GetComponent<Timer>();
+        havook = GameObject.Find("Havook").GetComponent<Player>();
 
         // Actualizar mision info
+        havook.quest.mainObjective = "Encuentra la llave de la Fortaleza Oscura";
 
         foreach(Transform child in transform)
         {
             spawners.Add(child);
         }
-
-        timer.StartTimer(roundDelay);
     }
 
     public void StartWave()
@@ -44,20 +44,16 @@ public class WaveManager : MonoBehaviour
         // Si havook ha muerto, parar
         if(currentWave < numberOfWaves){
             currentWave += 1;
-            
-            if(currentWave == 1){
-                mainObjective.text = "Libera la tierra de los escorpiones";
-            }
 
             enemiesInWave = enemyIncreaseFactor * currentWave;
             enemiestoSpawn = enemiesInWave;
 
-            Debug.Log("ENEMIGOS TOTALES "+ enemiestoSpawn.ToString());
-            // Actualizar mision info
-
             StartCoroutine(Spawn());
         }else{
             Debug.Log("MISION COMPLETADA");
+            keyInteractable.SetActive(true);
+            AudioManager.instance.Stop("InicioOleadas");
+            AudioManager.instance.Play("TierrasPerdidas");
         }
     }
 
@@ -83,10 +79,7 @@ public class WaveManager : MonoBehaviour
     public void EnemyDied()
     {
         enemiesInWave -= 1;
-
-        // Actualizar mision info
-        // ui.UpdateUI(currentWave, enemiesInWave);
-
+        havook.quest.goal.EnemyKilled();
         if (enemiesInWave == 0)
         {
             EndWave();
@@ -96,5 +89,15 @@ public class WaveManager : MonoBehaviour
     public Vector3 GetRandomSpawner()
     {
         return spawners[Random.Range(0, spawners.Count)].position;
+    }
+
+    public void StartTimer(){
+        timer.StartTimer(roundDelay);
+        havook.quest.started = true;
+        havook.quest.mainObjective = "Libera la tierra de los escorpiones";
+
+        //Cambiar audio
+        AudioManager.instance.Stop("TierrasPerdidas");
+        AudioManager.instance.Play("InicioOleadas");
     }
 }

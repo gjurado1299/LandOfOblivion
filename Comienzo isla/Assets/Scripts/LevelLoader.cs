@@ -77,8 +77,28 @@ public class LevelLoader : MonoBehaviour
         AudioManager.instance.Stop("GameOver");
         AudioManager.instance.Stop("Tutorial");
         AudioManager.instance.Stop("Bibury");
+        AudioManager.instance.Stop("TierrasPerdidas");
+        AudioManager.instance.Stop("InicioOleadas");
         AudioManager.instance.Play("MainTheme");
         StartCoroutine(LoadLevel(0));
+    }
+
+    public void GoBibury(){
+        GameObject havook = GameObject.Find("Havook");
+        if(havook){
+            player = havook.GetComponent<Player>();
+            stats = havook.GetComponent<PlayerStats>();
+            player.SavePlayerPrefs();
+
+            if(EquipmentManager.instance != null)
+                EquipmentManager.instance.SaveGameObjects();
+
+            stats.SavePlayerPrefs();
+        }
+        
+        AudioManager.instance.Stop("TierrasPerdidas");
+        AudioManager.instance.Play("Bibury");
+        StartCoroutine(LoadLevel(2));
     }
 
     public void KillPlayer(){

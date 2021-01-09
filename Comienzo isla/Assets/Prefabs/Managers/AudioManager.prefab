@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MainTheme
-    clip: {fileID: 8300000, guid: c0f5786f639278d479c9da914217fdad, type: 3}
+    clip: {fileID: 8300000, guid: cd905dc2d8966264689e1df892224b81, type: 3}
     volume: 0.18
     pitch: 1
     loop: 1
@@ -131,6 +131,18 @@ MonoBehaviour:
   - name: Bibury
     clip: {fileID: 8300000, guid: 18fa7f85faaee95408b6f749a5990a23, type: 3}
     volume: 0.02
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: TierrasPerdidas
+    clip: {fileID: 8300000, guid: c0f5786f639278d479c9da914217fdad, type: 3}
+    volume: 0.07
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: InicioOleadas
+    clip: {fileID: 8300000, guid: f2ca1c61b5cfde84487fd8e4b7b2b9ba, type: 3}
+    volume: 0.07
     pitch: 1
     loop: 1
     source: {fileID: 0}

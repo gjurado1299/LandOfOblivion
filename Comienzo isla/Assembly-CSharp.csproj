@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\Quests\QuestGiver.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestGoal.cs" />
      <Compile Include="Assets\Scripts\Sound.cs" />
+     <Compile Include="Assets\Scripts\StartMission.cs" />
      <Compile Include="Assets\Scripts\Stats\CharacterStats.cs" />
      <Compile Include="Assets\Scripts\Stats\EnemyStats.cs" />
      <Compile Include="Assets\Scripts\Stats\PlayerStats.cs" />

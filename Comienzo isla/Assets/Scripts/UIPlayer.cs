@@ -27,10 +27,12 @@ public class UIPlayer : MonoBehaviour
         if(player.quest == null){
             additionalInfo.gameObject.SetActive(false);
         }else{
-            if(player.quest.goal.goalType == GoalType.Kill){
-                additionalInfo.text = "Elimina enemigos: " + player.quest.goal.currentAmount.ToString() + "/" + player.quest.goal.requiredAmount.ToString();
-            }else{
-                additionalInfo.text = "Objetos encontrados: " + player.quest.goal.currentAmount.ToString() + "/" + player.quest.goal.requiredAmount.ToString();
+            if(player.quest.started == true){
+                if(player.quest.goal.goalType == GoalType.Kill){
+                    additionalInfo.text = "Elimina enemigos: " + player.quest.goal.currentAmount.ToString() + "/" + player.quest.goal.requiredAmount.ToString();
+                }else{
+                    additionalInfo.text = "Objetos encontrados: " + player.quest.goal.currentAmount.ToString() + "/" + player.quest.goal.requiredAmount.ToString();
+                }
             }
 
             if(player.quest.goal.IsReached() && player.quest.isActive){

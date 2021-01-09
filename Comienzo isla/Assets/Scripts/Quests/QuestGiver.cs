@@ -55,9 +55,9 @@ public class QuestGiver : MonoBehaviour
 
     public void InvokeDialogue(){
         //COMPROBAR QUE PASA SI GUARDAMOS Y CARGAMOS PARTIDA, PORQUE LA REFERENCIA DEBERIA SER QUIZÁ AL JUGADOR (Y A SU MISION)
-        if(quest.isActive && quest.goal.IsReached()){
+        if(player.quest.isActive && player.quest.goal.IsReached()){
             quest.dialogueTrigger.TriggerEndDialogue();
-        }else if(quest.isActive && !quest.goal.IsReached()){
+        }else if(player.quest.isActive && !player.quest.goal.IsReached()){
             quest.dialogueTrigger.TriggerHelperDialogue();
         }else{
             quest.dialogueTrigger.TriggerFirstDialogue();

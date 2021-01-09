@@ -72,12 +72,13 @@ public class animationStateController : MonoBehaviour
                 animator.SetBool("IsMoving", false);
             } 
 
-            animator.SetBool("HasWeapon", EquipmentManager.instance.hasWeapon);
             animator.SetBool("InCombat", combat.InCombat);
         }else if(combat.InCombat == false){
             animator.SetBool("InCombat", combat.InCombat);
         }
+
         animator.SetBool("IsBlocking", stats.blocking);
+        animator.SetBool("HasWeapon", EquipmentManager.instance.hasWeapon);
     }
 
     protected virtual void OnAttack(){
