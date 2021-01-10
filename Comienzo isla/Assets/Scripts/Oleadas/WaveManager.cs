@@ -50,7 +50,6 @@ public class WaveManager : MonoBehaviour
 
             StartCoroutine(Spawn());
         }else{
-            Debug.Log("MISION COMPLETADA");
             keyInteractable.SetActive(true);
             AudioManager.instance.Stop("InicioOleadas");
             AudioManager.instance.Play("TierrasPerdidas");

@@ -83,7 +83,7 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(0));
     }
 
-    public void GoBibury(){
+    public void LoadLevelByIndex(int index){
         GameObject havook = GameObject.Find("Havook");
         if(havook){
             player = havook.GetComponent<Player>();
@@ -95,10 +95,8 @@ public class LevelLoader : MonoBehaviour
 
             stats.SavePlayerPrefs();
         }
-        
-        AudioManager.instance.Stop("TierrasPerdidas");
-        AudioManager.instance.Play("Bibury");
-        StartCoroutine(LoadLevel(2));
+
+        StartCoroutine(LoadLevel(index));
     }
 
     public void KillPlayer(){

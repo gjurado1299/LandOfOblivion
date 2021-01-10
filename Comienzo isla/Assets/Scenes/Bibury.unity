@@ -961,6 +961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7047575546721021996, guid: fbe3f2386d5031a48913fe5fae2fc38f,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047575546721021996, guid: fbe3f2386d5031a48913fe5fae2fc38f,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1616254948}
@@ -968,6 +973,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: missionCompleted
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047575546721021996, guid: fbe3f2386d5031a48913fe5fae2fc38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047575546721021996, guid: fbe3f2386d5031a48913fe5fae2fc38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047575546721021996, guid: fbe3f2386d5031a48913fe5fae2fc38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 736686745}
+    - target: {fileID: 7047575546721021996, guid: fbe3f2386d5031a48913fe5fae2fc38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: LoadLevelByIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047575546721021996, guid: fbe3f2386d5031a48913fe5fae2fc38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047575546721021996, guid: fbe3f2386d5031a48913fe5fae2fc38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe3f2386d5031a48913fe5fae2fc38f, type: 3}
@@ -4365,7 +4400,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522811750}
-  m_LocalRotation: {x: 0.20480706, y: -0.017249344, z: 0.0036098813, w: 0.9786438}
+  m_LocalRotation: {x: 0.20481254, y: -0.015684424, z: 0.0032823798, w: 0.9786701}
   m_LocalPosition: {x: 79.31, y: 26.95, z: 43.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6281,12 +6316,12 @@ PrefabInstance:
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.size
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.size
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
@@ -6567,32 +6602,33 @@ PrefabInstance:
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[0]
-      value: FINITO
+      value: Hola, Harald
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[1]
-      value: 
+      value: "Havook, \xA1no se como has sobrevivido!"
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[2]
-      value: 
+      value: "\xBFTienes la llave?"
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[3]
-      value: 
+      value: "Si, aqu\xED est\xE1."
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[4]
-      value: 
+      value: "De acuerdo, ahora podr\xE1s ir a la Fortaleza Oscura, y conseguir el
+        material para arreglar tu barco."
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[5]
-      value: 
+      value: "Dime donde est\xE1, e ir\xE9."
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
@@ -6687,6 +6723,71 @@ PrefabInstance:
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[0]
+      value: Havook
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[6]
+      value: "No tan deprisa. Ten, te vendr\xE1 bien un escudo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[7]
+      value: "Te acompa\xF1ar\xE9 a la Fortaleza, Havook. S\xEDgueme."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[8]
+      value: Gracias, Harald.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[9]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[1]
+      value: Harald
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[2]
+      value: Harald
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[3]
+      value: Havook
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[4]
+      value: Harald
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[5]
+      value: Havook
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[6]
+      value: Harald
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[7]
+      value: Harald
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[8]
+      value: Havook
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
+        type: 3}
+      propertyPath: quest.dialogueTrigger.endingDialogue.names.Array.data[9]
       value: El pana calvo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9848,27 +9949,27 @@ PrefabInstance:
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20480704
+      value: 0.20481254
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0036098042
+      value: 0.0032823032
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.017249325
+      value: -0.015684405
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9786437
+      value: 0.97867006
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000045997046
+      value: 0.000000004239622
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -9883,12 +9984,12 @@ PrefabInstance:
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.22975293
+      value: 0.22975291
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000018765162
+      value: -0.000000018680158
       objectReference: {fileID: 0}
     - target: {fileID: 7398823824547757384, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}

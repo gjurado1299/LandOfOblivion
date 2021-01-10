@@ -40,6 +40,8 @@ public class AudioManager : MonoBehaviour
             Play("Bibury");
         else if(index == 3)
             Play("TierrasPerdidas");
+        else if(index == 4)
+            Play("TierrasPerdidas");
     }
 
     public void Play(string name){
