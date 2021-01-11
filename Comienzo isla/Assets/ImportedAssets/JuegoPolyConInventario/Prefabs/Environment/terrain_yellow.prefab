@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64319712954688158}
   m_Layer: 0
   m_Name: terrain_yellow
-  m_TagString: Untagged
+  m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

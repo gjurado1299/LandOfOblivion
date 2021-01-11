@@ -39,6 +39,9 @@
      <Compile Include="Assets\Animations\Warrior Pack Bundle 2 FREE\Code\IKHands.cs" />
      <Compile Include="Assets\Animations\Warrior Pack Bundle 2 FREE\Code\SmoothFollow.cs" />
      <Compile Include="Assets\Animations\Warrior Pack Bundle 2 FREE\Code\WarriorAnimationDemoFREE.cs" />
+     <Compile Include="Assets\ImportedAssets\BrokenVector\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\CharacterControllerDUNGEON.cs" />
+     <Compile Include="Assets\ImportedAssets\BrokenVector\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\MouseCamLook.cs" />
+     <Compile Include="Assets\ImportedAssets\BrokenVector\UltimateDungeonPack\Scripts\LightImprove.cs" />
      <Compile Include="Assets\ImportedAssets\JuegoPolyConInventario\Scripts\Axe.cs" />
      <Compile Include="Assets\ImportedAssets\JuegoPolyConInventario\Scripts\Crate.cs" />
      <Compile Include="Assets\ImportedAssets\JuegoPolyConInventario\Scripts\DamageSource.cs" />
@@ -109,6 +112,7 @@
      <Compile Include="Assets\Scripts\UIPlayer.cs" />
      <Compile Include="Assets\Scripts\WeaponUI.cs" />
      <Compile Include="Assets\Scripts\animationStateController.cs" />
+     <Compile Include="Assets\StartBossFight.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

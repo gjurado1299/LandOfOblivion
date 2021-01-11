@@ -161,6 +161,18 @@ public class EquipmentManager : MonoBehaviour
         return null;
     }
 
+    public GameObject FindItem(string itemName){
+        GameObject bp = GameObject.Find("Havook").transform.GetChild(1).GetChild(0).gameObject;
+        GameObject child;
+        for (int i = bp.transform.childCount-1; i >= 0; i--){
+            child = bp.transform.GetChild(i).gameObject;
+            if(child.name == itemName)
+                return child;
+        }
+
+        return null;
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.U))

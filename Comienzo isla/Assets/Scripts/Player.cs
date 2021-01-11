@@ -33,6 +33,20 @@ public class Player : MonoBehaviour
         experience += quest.experienceReward;
         gold += quest.goldReward;
 
+        if(quest.removableObject.Length > 0){
+            Debug.Log("Removable existe");
+            GameObject removable = EquipmentManager.instance.FindItem(quest.removableObject);
+            if(removable != null){
+                Debug.Log("ENCUENTRA OBJETO");
+
+                ItemPickUp i = removable.GetComponent<ItemPickUp>();
+                if (i != null){
+                    Inventario.instance.Remove(i.item);
+                }
+                Destroy(removable);
+            }
+        }
+
         GameObject itemR = GameObject.Find(quest.itemReward);
         if(itemR != null){
             ItemPickUp i = itemR.GetComponent<ItemPickUp>();

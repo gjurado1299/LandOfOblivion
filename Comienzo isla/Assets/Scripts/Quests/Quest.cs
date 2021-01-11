@@ -21,6 +21,7 @@ public class Quest
     public DialogueTrigger dialogueTrigger;
 
     public QuestGoal goal;
+    public string removableObject;
 
     public void Complete(){
         isActive = false;
@@ -33,6 +34,7 @@ public class Quest
         mainObjective = PlayerPrefs.GetString("QuestMainObjective", "");
         completedText = PlayerPrefs.GetString("QuestCompletedText", "");
         nextObjective = PlayerPrefs.GetString("QuestNextObjective", "");
+        removableObject = PlayerPrefs.GetString("QuestRemovableObject", "");
         experienceReward = PlayerPrefs.GetInt("QuestExperience", experienceReward);
         goldReward = PlayerPrefs.GetInt("QuestGold", goldReward);
 
@@ -40,6 +42,8 @@ public class Quest
             isActive = true;
         else
             isActive = false;
+
+        
 
         goal.SetPlayerPrefs();
         dialogueTrigger.SetPlayerPrefs();
@@ -49,6 +53,7 @@ public class Quest
     public void SavePlayerPrefs(){
         PlayerPrefs.SetString("QuestTitle", title);
         PlayerPrefs.SetString("QuestDescription", description);
+        PlayerPrefs.SetString("QuestRemovableObject", removableObject);
         PlayerPrefs.SetString("QuestMainObjective", mainObjective);
         PlayerPrefs.SetString("QuestCompletedText", completedText);
         PlayerPrefs.SetString("QuestNextObjective", nextObjective);
@@ -60,6 +65,8 @@ public class Quest
             PlayerPrefs.SetInt("QuestIsActive", 1);
         else
             PlayerPrefs.SetInt("QuestIsActive", 0);
+
+        
 
         goal.SavePlayerPrefs();
         dialogueTrigger.SavePlayerPrefs();
