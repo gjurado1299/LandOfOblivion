@@ -11,13 +11,16 @@ public class Consumable : Item
 
     public override void Use()
     {
+        PlayerStats stats = GameObject.Find("Havook").GetComponent<PlayerStats>();
         base.Use();
 
-        if(type == BuffType.Health){
-            GameObject.Find("Havook").GetComponent<PlayerStats>().IncreaseHealth(increment);
-        }
+        if(stats.isFullHealth() != true){
+            if(type == BuffType.Health){
+                stats.IncreaseHealth(increment);
+            }
 
-        RemoveFromInventory();
+            RemoveFromInventory();
+        }
     }
 
 

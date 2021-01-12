@@ -104,6 +104,7 @@ public class EquipmentManager : MonoBehaviour
 
         // Override de animaciones
         if(weaponAnimationsDict.ContainsKey(newItem)){
+            Debug.Log("");
             animatorController.currentAttackAnimSet = weaponAnimationsDict[newItem];
         }
     }
@@ -175,6 +176,13 @@ public class EquipmentManager : MonoBehaviour
 
     void Update()
     {
+        if(animatorController == null){
+            GameObject player = GameObject.FindWithTag("Player");
+            
+            if(player != null)
+                animatorController = player.GetComponent<animationStateController>();
+        }
+
         if(Input.GetKeyDown(KeyCode.U))
             UnEquipAll();
 
@@ -274,8 +282,13 @@ public class EquipmentManager : MonoBehaviour
 
         foreach(GameObject bp in bodyParts){
             for (int i = bp.transform.childCount-1; i >= 0; i--){
-                ItemPickUp item = bp.transform.GetChild(i).gameObject.GetComponent<ItemPickUp>();
+                Transform child = bp.transform.GetChild(i);
+                ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
                 if(item != null){
+                    if(SceneManager.GetActiveScene().buildIndex == 5){
+                        child.localScale = new Vector3((child.localScale.x*3/2), (child.localScale.y*3/2), (child.localScale.z*3/2));
+                    }
+
                     item.gameObject.transform.parent = weapons.transform; 
                     item.gameObject.transform.localPosition = zero;
                     item.gameObject.transform.localEulerAngles = zero;
@@ -303,17 +316,34 @@ public class EquipmentManager : MonoBehaviour
         GameObject weapons = GameObject.Find("Weapons");
         GameObject items = GameObject.Find("ItemsPlayer");
         GameObject bodyItems = GameObject.Find("Havook").transform.GetChild(1).GetChild(0).gameObject;
+        bool wasActive = false;
 
         if(weapons){
             for (int i = weapons.transform.childCount-1; i >= 0; i--){
+                wasActive = false;
                 Transform child = weapons.transform.GetChild(i);
                 ItemPickUp w = child.gameObject.GetComponent<ItemPickUp>();
+                GameObject interactable = child.GetChild(0).gameObject;
+
+                if(child.gameObject.activeSelf)
+                    wasActive = true;
+
+                child.gameObject.SetActive(true);
+                interactable.SetActive(true);
+
+                if(SceneManager.GetActiveScene().buildIndex == 5){
+                    child.localScale = new Vector3((child.localScale.x*2/3), (child.localScale.y*2/3), (child.localScale.z*2/3));
+                }
 
                 child.parent = bodyParts[w.bodyPart].transform;
 
                 //Posicion relativa a la parte del cuerpo
                 child.localPosition = w.item.PickPosition;
                 child.localEulerAngles = w.item.PickRotation;
+
+                interactable.SetActive(false);
+                if(wasActive == false)
+                    child.gameObject.SetActive(false);
             }
             Destroy(weapons);
         }

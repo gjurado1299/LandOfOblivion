@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Animator animatorPlayer;
 
     public GameObject InfoPanel;
+    public TextMeshProUGUI itemName;
     public TextMeshProUGUI infoText;
     public TextMeshProUGUI damageText;
     public TextMeshProUGUI protectionText;
@@ -34,11 +35,13 @@ public class GameManager : MonoBehaviour
 
         if(InfoPanel == null){
             InfoPanel = inventarioUI.transform.Find("InfoPanel").GetChild(0).gameObject;
-            infoText = InfoPanel.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
-            damageText = InfoPanel.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
-            protectionText = InfoPanel.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>();
+            itemName = InfoPanel.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+            infoText = InfoPanel.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
+            damageText = InfoPanel.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>();
+            protectionText = InfoPanel.transform.GetChild(5).gameObject.GetComponent<TextMeshProUGUI>();
 
         }
+
         if(Input.GetButtonDown("Inventory") && (inventarioUI.activeSelf || bloqueado == false))
         {
             inventarioUI.SetActive(!inventarioUI.activeSelf);
@@ -88,7 +91,8 @@ public class GameManager : MonoBehaviour
         string damage;
         string protection;
         if(slot.item != null){
-            InfoPanel.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = slot.item.infoPick;
+            itemName.text = slot.item.name;
+            infoText.text = slot.item.infoPick;
             if(slot.item.GetType() == typeof(Equipment)){
                 damage = ((Equipment)slot.item).damageModifier.ToString();
                 protection = ((Equipment)slot.item).blockModifier.ToString();
@@ -97,8 +101,8 @@ public class GameManager : MonoBehaviour
                 protection = "-";
             }
 
-            InfoPanel.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().text = protection;
-            InfoPanel.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().text = protection;
+            damageText.text = damage;
+            protectionText.text = protection;
             CanvasGroup cg = InfoPanel.GetComponent<CanvasGroup>();
             cg.alpha = 1;
         }

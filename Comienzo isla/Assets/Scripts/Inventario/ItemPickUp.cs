@@ -35,9 +35,9 @@ public class ItemPickUp : MonoBehaviour
             AudioManager.instance.Play("PickUp");
 
             if(gameObject.name == "Llave" && picked == false){
-                GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadLevelByIndex(2);
                 GameObject.Find("Havook").GetComponent<Player>().quest.completedText = "Habla con Harald";
                 picked = true;
+                GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadLevelByIndex(2);
             }
         }
     } 

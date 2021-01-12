@@ -65,6 +65,10 @@ public class CharacterStats : MonoBehaviour
             currentHealth = maxHealth;
     }
 
+    public bool isFullHealth(){
+        return (currentHealth >= maxHealth);
+    }
+
     public virtual void Die(){
         // Muere
 

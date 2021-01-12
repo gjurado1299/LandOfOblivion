@@ -72,47 +72,48 @@
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
-     <Compile Include="Assets\Scripts\AudioManager.cs" />
-     <Compile Include="Assets\Scripts\BarraVida.cs" />
-     <Compile Include="Assets\Scripts\CharacterCombat.cs" />
+     <Compile Include="Assets\Scripts\Combat\CharacterCombat.cs" />
+     <Compile Include="Assets\Scripts\Combat\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Combat\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
      <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
-     <Compile Include="Assets\Scripts\Display.cs" />
-     <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Extra\CameraLighting.cs" />
+     <Compile Include="Assets\Scripts\Extra\Display.cs" />
+     <Compile Include="Assets\Scripts\Extra\StartBossFight.cs" />
+     <Compile Include="Assets\Scripts\Extra\StartMission.cs" />
      <Compile Include="Assets\Scripts\Guardado\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Guardado\SaveSystem.cs" />
-     <Compile Include="Assets\Scripts\HealthUI.cs" />
-     <Compile Include="Assets\Scripts\Interactable.cs" />
+     <Compile Include="Assets\Scripts\Havook\Interactable.cs" />
+     <Compile Include="Assets\Scripts\Havook\MovimientoTerceraPersona.cs" />
+     <Compile Include="Assets\Scripts\Havook\Player.cs" />
+     <Compile Include="Assets\Scripts\Havook\animationStateController.cs" />
      <Compile Include="Assets\Scripts\Inventario\Consumable.cs" />
      <Compile Include="Assets\Scripts\Inventario\Equipment.cs" />
      <Compile Include="Assets\Scripts\Inventario\EquipmentManager.cs" />
      <Compile Include="Assets\Scripts\Inventario\Inventario.cs" />
-     <Compile Include="Assets\Scripts\Inventario\InventarioUI.cs" />
      <Compile Include="Assets\Scripts\Inventario\Item.cs" />
      <Compile Include="Assets\Scripts\Inventario\ItemPickUp.cs" />
      <Compile Include="Assets\Scripts\Inventario\Slot.cs" />
-     <Compile Include="Assets\Scripts\LevelLoader.cs" />
-     <Compile Include="Assets\Scripts\MovimientoTerceraPersona.cs" />
+     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\LevelLoader.cs" />
+     <Compile Include="Assets\Scripts\Managers\Sound.cs" />
      <Compile Include="Assets\Scripts\Oleadas\Timer.cs" />
      <Compile Include="Assets\Scripts\Oleadas\WaveManager.cs" />
-     <Compile Include="Assets\Scripts\OptionsMenu.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Quests\Quest.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestGiver.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestGoal.cs" />
-     <Compile Include="Assets\Scripts\Sound.cs" />
-     <Compile Include="Assets\Scripts\StartMission.cs" />
      <Compile Include="Assets\Scripts\Stats\CharacterStats.cs" />
      <Compile Include="Assets\Scripts\Stats\EnemyStats.cs" />
      <Compile Include="Assets\Scripts\Stats\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Stats\Stat.cs" />
-     <Compile Include="Assets\Scripts\UIPlayer.cs" />
-     <Compile Include="Assets\Scripts\WeaponUI.cs" />
-     <Compile Include="Assets\Scripts\animationStateController.cs" />
-     <Compile Include="Assets\StartBossFight.cs" />
+     <Compile Include="Assets\Scripts\UI\BarraVida.cs" />
+     <Compile Include="Assets\Scripts\UI\HealthUI.cs" />
+     <Compile Include="Assets\Scripts\UI\InventarioUI.cs" />
+     <Compile Include="Assets\Scripts\UI\OptionsMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPlayer.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -726,9 +727,6 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -746,12 +744,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

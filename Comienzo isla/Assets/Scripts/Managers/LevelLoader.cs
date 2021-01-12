@@ -102,9 +102,7 @@ public class LevelLoader : MonoBehaviour
     public void KillPlayer(){
 
         // Tener en cuenta checkpoints
-        Destroy(EquipmentManager.instance.gameObject);
-        Destroy(Inventario.instance.gameObject);
-        Destroy(InventarioUI.instance.gameObject);
+        
 
         AudioManager.instance.Stop("GameOver");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

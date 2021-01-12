@@ -42,6 +42,8 @@ public class AudioManager : MonoBehaviour
             Play("TierrasPerdidas");
         else if(index == 4)
             Play("TierrasPerdidas");
+        else if(index == 5)
+            Play("InicioOleadas");
     }
 
     public void Play(string name){

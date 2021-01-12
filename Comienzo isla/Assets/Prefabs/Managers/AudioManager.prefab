@@ -142,7 +142,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: InicioOleadas
     clip: {fileID: 8300000, guid: f2ca1c61b5cfde84487fd8e4b7b2b9ba, type: 3}
-    volume: 0.07
+    volume: 0.06
     pitch: 1
     loop: 1
     source: {fileID: 0}
