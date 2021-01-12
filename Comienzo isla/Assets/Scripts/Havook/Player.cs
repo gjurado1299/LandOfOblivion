@@ -10,11 +10,19 @@ public class Player : MonoBehaviour
 
     // puede ser una lista
     public Quest quest;
+    PlayerStats stats;
 
     public void Start(){
         experience = PlayerPrefs.GetInt("Experience", 0);
         gold = PlayerPrefs.GetInt("Gold", 0);
         quest.SetPlayerPrefs();
+
+        stats = gameObject.GetComponent<PlayerStats>();
+
+        if(LoadedCheck.instance.loaded == true){
+            LoadPlayer();
+            LoadedCheck.instance.loaded = false;
+        }
     }
 
     public void SavePlayerPrefs(){
@@ -34,10 +42,8 @@ public class Player : MonoBehaviour
         gold += quest.goldReward;
 
         if(quest.removableObject.Length > 0){
-            Debug.Log("Removable existe");
             GameObject removable = EquipmentManager.instance.FindItem(quest.removableObject);
             if(removable != null){
-                Debug.Log("ENCUENTRA OBJETO");
 
                 ItemPickUp i = removable.GetComponent<ItemPickUp>();
                 if (i != null){
@@ -63,10 +69,11 @@ public class Player : MonoBehaviour
     }
 
     public void SavePlayer(){
-        SaveSystem.SavePlayer(this);
+        SaveSystem.SavePlayer(this, stats);
     }
 
     public void LoadPlayer(){
+        Debug.Log("LOADING PLAYER");
         PlayerData data = SaveSystem.LoadPlayer();
 
         experience = data.experience;
@@ -76,7 +83,11 @@ public class Player : MonoBehaviour
         position.x = data.position[0];
         position.y = data.position[1];
         position.z = data.position[2];
+        gameObject.SetActive(false);
         transform.position = position;
-    }
+        gameObject.SetActive(true);
 
+
+        stats.LoadPlayer(data.health);
+    }
 }

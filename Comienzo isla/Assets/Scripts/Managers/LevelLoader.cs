@@ -22,11 +22,11 @@ public class LevelLoader : MonoBehaviour
     PlayerStats stats;
 
     public float transitionTime = 1f;
-
+    bool loaded = false;
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void Start(){
@@ -46,6 +46,15 @@ public class LevelLoader : MonoBehaviour
 
        
         LoadNextLevel();
+    }
+
+    public void Load(){
+        LoadLevelByIndex(SaveSystem.LoadScene());
+        LoadedCheck.instance.loaded = true;
+    }
+
+    public void Save(){
+        SaveSystem.SaveScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadNextLevel(){
@@ -84,6 +93,8 @@ public class LevelLoader : MonoBehaviour
     }
 
     public void LoadLevelByIndex(int index){
+        if(index == -1) return;
+
         GameObject havook = GameObject.Find("Havook");
         if(havook){
             player = havook.GetComponent<Player>();

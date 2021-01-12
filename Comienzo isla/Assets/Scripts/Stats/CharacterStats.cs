@@ -69,6 +69,10 @@ public class CharacterStats : MonoBehaviour
         return (currentHealth >= maxHealth);
     }
 
+    public void LoadPlayer(int health){
+        currentHealth = health;
+    }
+
     public virtual void Die(){
         // Muere
 

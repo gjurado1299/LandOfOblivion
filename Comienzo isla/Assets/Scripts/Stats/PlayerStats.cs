@@ -38,7 +38,6 @@ public class PlayerStats : CharacterStats
         this.gameObject.GetComponent<Animator>().SetTrigger("IsDead");
         gameManager.bloqueado = true;
 
-        // Animar Game Over
         StartCoroutine(GameOverPanel());
     }
 
@@ -65,4 +64,5 @@ public class PlayerStats : CharacterStats
         PlayerPrefs.SetInt("CurrentHealth", currentHealth);
     }
 
+    
 }

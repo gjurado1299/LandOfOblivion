@@ -6,12 +6,14 @@ using UnityEngine;
 public class PlayerData
 {
     public int experience;
-    public int gold ;
+    public int gold;
+    public int health;
     public float[] position;
 
-    public PlayerData(Player player){
+    public PlayerData(Player player, PlayerStats stats){
         experience = player.experience;
         gold = player.gold;
+        health = stats.currentHealth;
 
         position = new float[3];
 

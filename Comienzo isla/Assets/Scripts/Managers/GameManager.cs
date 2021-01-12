@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI protectionText;
 
     public bool bloqueado = false;
+    public bool loaded = false;
 
     // Start is called before the first frame update
     void Start()

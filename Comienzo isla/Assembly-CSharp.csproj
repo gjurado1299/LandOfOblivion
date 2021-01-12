@@ -72,6 +72,7 @@
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\LoadedCheck.cs" />
      <Compile Include="Assets\Scripts\Combat\CharacterCombat.cs" />
      <Compile Include="Assets\Scripts\Combat\Enemy.cs" />
      <Compile Include="Assets\Scripts\Combat\EnemyController.cs" />
@@ -369,6 +370,9 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -727,11 +731,23 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Editor">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -744,6 +760,18 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging.Editor">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

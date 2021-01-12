@@ -6201,7 +6201,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522811750}
-  m_LocalRotation: {x: 0.20482138, y: -0.012791996, z: 0.0026770635, w: 0.97871214}
+  m_LocalRotation: {x: 0.20481959, y: -0.013433192, z: 0.0028112503, w: 0.97870356}
   m_LocalPosition: {x: 93.15, y: 26.95, z: 36.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -10174,15 +10174,125 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2054917006892708632, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 2054917006892708632, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 2054917006892708632, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HoverButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054917006892708632, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304798235849131612, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 2304798235849131612, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 2304798235849131612, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HoverButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304798235849131612, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618416502121635182, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3618416502121635182, guid: 32e30a4dede76914c8901a38e3e8e516,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1616254948}
     - target: {fileID: 3618416502121635182, guid: 32e30a4dede76914c8901a38e3e8e516,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SavePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618416502121635182, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618416502121635182, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618416502121635182, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 736686745}
+    - target: {fileID: 3618416502121635182, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Save
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618416502121635182, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194593269574125681, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 4194593269574125681, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 4194593269574125681, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HoverButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194593269574125681, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065677150452357569, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 5065677150452357569, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 5065677150452357569, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HoverButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065677150452357569, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickButton
       objectReference: {fileID: 0}
     - target: {fileID: 6131498166788681131, guid: 32e30a4dede76914c8901a38e3e8e516,
         type: 3}
@@ -10198,7 +10308,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2042296161}
     - target: {fileID: 6131498167223626362, guid: 32e30a4dede76914c8901a38e3e8e516,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -10318,6 +10428,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183966486980675124, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 7183966486980675124, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463628322}
+    - target: {fileID: 7183966486980675124, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HoverButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183966486980675124, guid: 32e30a4dede76914c8901a38e3e8e516,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32e30a4dede76914c8901a38e3e8e516, type: 3}
@@ -14701,27 +14831,27 @@ PrefabInstance:
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20482136
+      value: 0.20481956
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0026769906
+      value: 0.0028111774
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.012791981
+      value: -0.013433176
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.97871214
+      value: 0.97870356
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000042365693
+      value: 0.000000004236561
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -14741,7 +14871,7 @@ PrefabInstance:
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001867944
+      value: -0.000000018679437
       objectReference: {fileID: 0}
     - target: {fileID: 7398823824547757384, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -17294,6 +17424,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f21109d9292d6148a1877fd18b7da96, type: 3}
+--- !u!114 &1463628322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 309881269216745849, guid: 5f21109d9292d6148a1877fd18b7da96,
+    type: 3}
+  m_PrefabInstance: {fileID: 1463628321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89361c68a532eb4cb4d441dfe25d15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1475267988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4501903411537258, guid: 52b2dd90b973b4b4cae0206dc54205e3,
