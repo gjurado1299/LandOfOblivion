@@ -23,6 +23,7 @@ public class WaveManager : MonoBehaviour
 
     public GameObject enemy;
     public GameObject keyInteractable;
+    public GameObject efecto;
     Player havook;
 
     private void Start()
@@ -50,6 +51,7 @@ public class WaveManager : MonoBehaviour
 
             StartCoroutine(Spawn());
         }else{
+            efecto.SetActive(false);
             keyInteractable.SetActive(true);
             AudioManager.instance.Stop("InicioOleadas");
             AudioManager.instance.Play("TierrasPerdidas");
@@ -98,5 +100,41 @@ public class WaveManager : MonoBehaviour
         //Cambiar audio
         AudioManager.instance.Stop("TierrasPerdidas");
         AudioManager.instance.Play("InicioOleadas");
+    }
+
+    public void AdjustSceneOnLoad(Quest quest){
+        int enemiesKilled = quest.goal.currentAmount;
+        int counter = 0;
+        int n = 0;
+        bool breaked = false;
+
+        int i=0, j=0;
+
+        AudioManager.instance.Stop("TierrasPerdidas");
+        AudioManager.instance.Play("InicioOleadas");
+        if(quest.goal.currentAmount > 0){
+            for(i=0; i<numberOfWaves; i++){
+                currentWave+=1;
+                enemiestoSpawn = (i+1)*2;
+                n = enemiestoSpawn;
+
+                for(j=0; j<n; j++){
+                    counter += 1;
+                    enemiestoSpawn -= 1;
+                    if(counter == enemiesKilled){
+                        breaked = true;
+                        break;
+                    }
+                }
+
+                if(breaked)
+                    break;
+            }
+
+            enemiesInWave = enemiestoSpawn;
+            StartCoroutine(Spawn());
+        }else{
+            StartWave();
+        }
     }
 }

@@ -13,7 +13,14 @@ public class Enemy : MonoBehaviour
         myStats = GetComponent<CharacterStats>();
     }
 
+    void Update(){
+        if(player == null){
+            player = GameObject.Find("Havook");
+        }
+    }
+
     public void recibeDaño(){
+        
         CharacterCombat playerCombat = player.GetComponent<CharacterCombat>();
         if(playerCombat != null){
             playerCombat.Attack(myStats);

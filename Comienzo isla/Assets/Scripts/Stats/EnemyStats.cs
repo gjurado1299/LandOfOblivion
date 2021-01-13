@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyStats : CharacterStats
 {
@@ -19,7 +20,8 @@ public class EnemyStats : CharacterStats
     }
 
     void Start(){
-        waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
+        if(SceneManager.GetActiveScene().buildIndex == 3)
+            waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
     }
 
     void Update(){
@@ -31,7 +33,6 @@ public class EnemyStats : CharacterStats
             // Soltar loot
             
             if(Random.Range(0f, 1.0f) < probDrop){
-                Debug.Log("Droppeando Item");
                 Instantiate(loot, gameObject.transform.position, Quaternion.identity);
             }
 

@@ -33,6 +33,7 @@ public class CharacterCombat : MonoBehaviour
     }
 
     public void Attack(CharacterStats targetStats){
+
         if( attackCooldown <= 0f && targetStats.dead == false && myStats.dead == false && gameManager.ActivePanels() == false){
             
             StartCoroutine(DoDamage(targetStats, attackDelay));

@@ -8,7 +8,9 @@ public class StartBossFight : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if(started == false && other.gameObject.CompareTag("Player")){
-            Debug.Log("Empieza la batalla del boss");
+            GameObject.Find("Havook").GetComponent<Player>().quest.mainObjective = "Derrota a X";
+            
+            GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadNextLevel();
             started = true;
         }
     }

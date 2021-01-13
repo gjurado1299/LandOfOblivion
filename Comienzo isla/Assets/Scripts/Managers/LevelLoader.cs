@@ -22,7 +22,7 @@ public class LevelLoader : MonoBehaviour
     PlayerStats stats;
 
     public float transitionTime = 1f;
-    bool loaded = false;
+
     // Update is called once per frame
     void Update()
     {

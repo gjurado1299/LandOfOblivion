@@ -42,6 +42,16 @@
      <Compile Include="Assets\ImportedAssets\BrokenVector\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\CharacterControllerDUNGEON.cs" />
      <Compile Include="Assets\ImportedAssets\BrokenVector\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\MouseCamLook.cs" />
      <Compile Include="Assets\ImportedAssets\BrokenVector\UltimateDungeonPack\Scripts\LightImprove.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+     <Compile Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\ImportedAssets\JuegoPolyConInventario\Scripts\Axe.cs" />
      <Compile Include="Assets\ImportedAssets\JuegoPolyConInventario\Scripts\Crate.cs" />
      <Compile Include="Assets\ImportedAssets\JuegoPolyConInventario\Scripts\DamageSource.cs" />
@@ -72,7 +82,7 @@
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
-     <Compile Include="Assets\LoadedCheck.cs" />
+     <Compile Include="Assets\Scripts\Combat\Boss\Boss_walk.cs" />
      <Compile Include="Assets\Scripts\Combat\CharacterCombat.cs" />
      <Compile Include="Assets\Scripts\Combat\Enemy.cs" />
      <Compile Include="Assets\Scripts\Combat\EnemyController.cs" />
@@ -81,9 +91,13 @@
      <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
      <Compile Include="Assets\Scripts\Extra\CameraLighting.cs" />
      <Compile Include="Assets\Scripts\Extra\Display.cs" />
+     <Compile Include="Assets\Scripts\Extra\LoadedCheck.cs" />
      <Compile Include="Assets\Scripts\Extra\StartBossFight.cs" />
      <Compile Include="Assets\Scripts\Extra\StartMission.cs" />
+     <Compile Include="Assets\Scripts\Guardado\DialogueTriggerData.cs" />
      <Compile Include="Assets\Scripts\Guardado\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\Guardado\QuestData.cs" />
+     <Compile Include="Assets\Scripts\Guardado\QuestGoalData.cs" />
      <Compile Include="Assets\Scripts\Guardado\SaveSystem.cs" />
      <Compile Include="Assets\Scripts\Havook\Interactable.cs" />
      <Compile Include="Assets\Scripts\Havook\MovimientoTerceraPersona.cs" />
@@ -152,13 +166,17 @@
      <Compile Include="Assets\Unity\Info\Scripts\Readme.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
      <None Include="Assets\ImportedAssets\rpg-tutorial-assets\README.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
+     <None Include="Assets\ImportedAssets\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\ImportedAssets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\ImportedAssets\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
      <None Include="Assets\Personajes\Polytope Studio\Lowpoly Medieval Characters\Sources\Shaders\PT_Medieval_Armors_Shader_PBR.shader" />
@@ -177,9 +195,11 @@
      <None Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\ImportedAssets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\ImportedAssets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\ImportedAssets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Personajes\Polytope Studio\Lowpoly Medieval Characters\Sources\Shaders\PT_Medieval_Armors_Shader_Toon.shader" />
+     <None Include="Assets\Enemies\Boss\BitGem\Skeleton_Grunt\Animations\skeleton_grunt_animation_list.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Audio\Fantasy Arcade RPG Freedom World Sounds - Free Package\assetexplain.txt" />
@@ -370,9 +390,6 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -734,20 +751,11 @@
     <Reference Include="Cinemachine">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Editor">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Animation.Rigging">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -761,17 +769,8 @@
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Animation.Rigging.Editor">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="com.unity.cinemachine.editor">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:/UNIVERSIDAD/4º Curso/Videojuegos/Juegos/Comienzo isla/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -781,6 +780,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{3d50345f-d381-0042-68e1-dcd506b9bd64}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{92efbf31-6931-965f-804b-735235481ba7}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{e668d4de-7645-6040-48b7-cf675d1d2163}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

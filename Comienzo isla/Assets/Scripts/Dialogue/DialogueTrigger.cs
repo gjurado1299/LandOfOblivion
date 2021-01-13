@@ -55,7 +55,7 @@ public class DialogueTrigger
 
     public void SavePlayerPrefs(){
         
-       PlayerPrefs.SetInt("sizeFirst", firstDialogue.sentences.Length);
+        PlayerPrefs.SetInt("sizeFirst", firstDialogue.sentences.Length);
         PlayerPrefs.SetInt("sizeHelper", helper.sentences.Length);
         PlayerPrefs.SetInt("sizeEnding", endingDialogue.sentences.Length);
 
@@ -88,5 +88,14 @@ public class DialogueTrigger
         foreach(string n in endingDialogue.names){
             PlayerPrefs.SetString("endingNames"+i++,n);
         }
+    }
+
+    public void LoadDialogueTrigger(DialogueTriggerData dialogueTrigger){
+        firstDialogue.sentences = dialogueTrigger.dialogueStartSentences;
+        firstDialogue.names = dialogueTrigger.dialogueStartNames;
+        helper.sentences = dialogueTrigger.dialogueHelperSentences;
+        helper.names = dialogueTrigger.dialogueHelperNames;
+        endingDialogue.sentences = dialogueTrigger.dialogueEndSentences;
+        endingDialogue.names = dialogueTrigger.dialogueEndNames;
     }
 }

@@ -72,4 +72,22 @@ public class Quest
         dialogueTrigger.SavePlayerPrefs();
         
     }
+
+    public void LoadQuest(QuestData data){
+        isActive = data.isActive;
+        started = data.started;
+        title = data.title;
+        description = data.description;
+        experienceReward = data.experienceReward;
+        goldReward = data.goldReward;
+        itemReward = data.itemReward;
+        mainObjective = data.mainObjective;
+        completedText = data.completedText;
+        nextObjective = data.nextObjective;
+        removableObject = data.removableObject;
+    }
+
+    public void AdjustQuantity(){
+        goal.AdjustQuantity();
+    }
 }

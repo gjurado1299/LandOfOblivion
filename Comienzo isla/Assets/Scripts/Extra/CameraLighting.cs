@@ -2,7 +2,7 @@
 
 public class CameraLighting : MonoBehaviour
 {
-    [SerializeField] private Light _ignoreLight;
+    [SerializeField] private Light _ignoreLight = null;
 
     private void OnPreCull(){
         EnableLight(false);

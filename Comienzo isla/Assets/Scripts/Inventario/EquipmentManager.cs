@@ -285,7 +285,9 @@ public class EquipmentManager : MonoBehaviour
                 Transform child = bp.transform.GetChild(i);
                 ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
                 if(item != null){
-                    if(SceneManager.GetActiveScene().buildIndex == 5){
+                    int index = SceneManager.GetActiveScene().buildIndex;
+                    
+                    if(index == 5 || index == 6){
                         child.localScale = new Vector3((child.localScale.x*3/2), (child.localScale.y*3/2), (child.localScale.z*3/2));
                     }
 
@@ -330,8 +332,9 @@ public class EquipmentManager : MonoBehaviour
 
                 child.gameObject.SetActive(true);
                 interactable.SetActive(true);
-
-                if(SceneManager.GetActiveScene().buildIndex == 5){
+                
+                int index = SceneManager.GetActiveScene().buildIndex;
+                if(index == 5 || index == 6){
                     child.localScale = new Vector3((child.localScale.x*2/3), (child.localScale.y*2/3), (child.localScale.z*2/3));
                 }
 

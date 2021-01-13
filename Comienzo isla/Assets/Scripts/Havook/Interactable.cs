@@ -100,6 +100,11 @@ public class Interactable : MonoBehaviour
                 if (Input.GetKeyDown(interactKey))
                 {
                     UIPanel.GetComponent<CanvasGroup>().alpha = 0;
+
+                    if(gameObject.transform.parent.gameObject.name == "castle_door_1"){
+                        jugadorScript.quest.mainObjective = "Explora el castillo y encuentra el material";
+                    }
+
                     interactAction.Invoke();
                     if(type == "missionObj"){
                         jugadorScript.getMissionObject();

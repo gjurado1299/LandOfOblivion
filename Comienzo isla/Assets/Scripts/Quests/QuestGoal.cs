@@ -26,6 +26,11 @@ public class QuestGoal
       }
   }
 
+  public void AdjustQuantity(){
+      // A veces, por algun motivo, no cuenta bien algunos enemigos. Ajuste seguro.
+      currentAmount = requiredAmount;
+  }
+
   public void SetPlayerPrefs(){
         requiredAmount = PlayerPrefs.GetInt("QuestGoalRequired", 0);
         currentAmount = PlayerPrefs.GetInt("QuestGoalCurrent", 0);
@@ -46,6 +51,18 @@ public class QuestGoal
         }else{
             PlayerPrefs.SetInt("QuestGoalType", 1);
         }   
+    }
+
+    public void LoadQuestGoal(QuestGoalData data){
+        currentAmount = data.currentAmount;
+        requiredAmount = data.requiredAmount;
+
+        if(data.isKill == true){
+            goalType = GoalType.Kill;
+        }else{
+            goalType = GoalType.Gathering;
+
+        }
     }
 
 }
