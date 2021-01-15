@@ -13,6 +13,7 @@ public class CharacterStats : MonoBehaviour
 
     public bool blocking = false;
     public BarraVida barraVida;
+    Animator animator;
 
     public event System.Action<int, int> OnHealthChanged;
 
@@ -21,11 +22,12 @@ public class CharacterStats : MonoBehaviour
         if(barraVida != null){
             barraVida.SetMaxHealth(maxHealth);
         }
+
+        animator = gameObject.GetComponent<Animator>();
     }
 
     void Update(){
-        if(barraVida != null)
-            barraVida.SetHealth(currentHealth);
+        CheckBar();
 
         if(Input.GetMouseButton(1))
             blocking = true;
@@ -35,23 +37,31 @@ public class CharacterStats : MonoBehaviour
     }
     
     public void TakeDamage (int damage){
+        if(gameObject.name != "Havook" || animator.GetCurrentAnimatorStateInfo(0).IsName("Stand To Roll") == false){
 
-        // Al integrar armadura hay que corregir esta expresion
-        damage -= damage * (armor.GetValue()/100);
+            // Al integrar armadura hay que corregir esta expresion
+            damage -= damage * (armor.GetValue()/100);
 
-        if(blocking){
-            damage = (int)((double) damage - damage * block.GetValue()/100);
+            if(blocking){
+                damage = (int)((double) damage - damage * block.GetValue()/100);
+            }
+
+            currentHealth -= damage;
+
+            if(OnHealthChanged != null){
+                OnHealthChanged(maxHealth, currentHealth);
+            }
+                
+            if(currentHealth <= 0){
+                dead = true;
+                Die();
+            }
         }
-
-        currentHealth -= damage;
-
-        if(OnHealthChanged != null){
-            OnHealthChanged(maxHealth, currentHealth);
-        }
-            
-        if(currentHealth <= 0){
-            dead = true;
-            Die();
+    }
+    
+    public void CheckBar(){
+        if(barraVida != null){
+            barraVida.SetHealth(currentHealth);
         }
     }
 
@@ -63,6 +73,10 @@ public class CharacterStats : MonoBehaviour
         currentHealth += increment;
         if(currentHealth > maxHealth)
             currentHealth = maxHealth;
+    }
+
+    public bool isEnraged(float percentage){
+        return ((percentage*maxHealth) >= currentHealth);
     }
 
     public bool isFullHealth(){

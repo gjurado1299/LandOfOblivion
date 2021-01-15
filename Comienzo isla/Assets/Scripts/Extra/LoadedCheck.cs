@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoadedCheck : MonoBehaviour
 {
     public bool loaded = false;
+    public bool died = false;
 
     #region Singleton
     public static LoadedCheck instance;

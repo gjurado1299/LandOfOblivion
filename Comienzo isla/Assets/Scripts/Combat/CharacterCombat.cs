@@ -34,8 +34,11 @@ public class CharacterCombat : MonoBehaviour
 
     public void Attack(CharacterStats targetStats){
 
+        if(targetStats == null){
+            targetStats = GameObject.Find("Havook").GetComponent<PlayerStats>();
+        }
+
         if( attackCooldown <= 0f && targetStats.dead == false && myStats.dead == false && gameManager.ActivePanels() == false){
-            
             StartCoroutine(DoDamage(targetStats, attackDelay));
 
             if(OnAttack != null){

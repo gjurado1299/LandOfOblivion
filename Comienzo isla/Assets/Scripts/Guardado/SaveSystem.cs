@@ -57,6 +57,47 @@ public static class SaveSystem {
         stream.Close();
     }
 
+    public static void SaveInventoryObjects(GameObject itemBp, GameObject rightHand, GameObject leftHand, bool byScene){
+        InventoryObjectData inventoryObjectData = new InventoryObjectData();
+        string path = "";
+
+        for (int i = itemBp.transform.childCount-1; i >= 0; i--){
+            Transform child = itemBp.transform.GetChild(i);
+            ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
+            if(item != null){
+                inventoryObjectData.AddItem(new GameObjectSaveData(child.gameObject));
+            }
+        }
+
+        for (int i = rightHand.transform.childCount-1; i >= 0; i--){
+            Transform child = rightHand.transform.GetChild(i);
+            ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
+            if(item != null){
+                inventoryObjectData.AddRightHand(new GameObjectSaveData(child.gameObject));
+            }
+        }
+
+        for (int i = leftHand.transform.childCount-1; i >= 0; i--){
+            Transform child = leftHand.transform.GetChild(i);
+            ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
+            if(item != null){
+                inventoryObjectData.AddLeftHand(new GameObjectSaveData(child.gameObject));
+            }
+        }
+
+        BinaryFormatter formatter = new BinaryFormatter();
+        if(byScene == true){
+            path = Application.persistentDataPath + "/inventoryObjectsScene.data";
+        }else{
+            path = Application.persistentDataPath + "/inventoryObjects.data";
+        }
+
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        formatter.Serialize(stream, inventoryObjectData);
+        stream.Close();
+    }
+
     public static int LoadScene(){
         string path = Application.persistentDataPath + "/scene.data";
 
@@ -71,6 +112,29 @@ public static class SaveSystem {
         }else{
             Debug.LogError("Save not found in "+path);
             return -1;
+        }
+    }
+
+    public static InventoryObjectData LoadInventoryObjects(bool byScene){
+        string path = "";
+
+        if(byScene == true){
+            path = Application.persistentDataPath + "/inventoryObjectsScene.data";
+        }else{
+            path = Application.persistentDataPath + "/inventoryObjects.data";
+        }
+
+        if(File.Exists(path)){
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            InventoryObjectData data = formatter.Deserialize(stream) as InventoryObjectData;
+            stream.Close();
+
+            return data;
+        }else{
+            Debug.LogError("Save not found in "+path);
+            return null;
         }
     }
 

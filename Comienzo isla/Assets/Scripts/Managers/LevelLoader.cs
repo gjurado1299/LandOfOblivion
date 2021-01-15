@@ -44,11 +44,19 @@ public class LevelLoader : MonoBehaviour
         if(InventarioUI.instance != null)  
             Destroy(InventarioUI.instance.gameObject);
 
-       
         LoadNextLevel();
     }
 
     public void Load(){
+        if(EquipmentManager.instance != null)
+            Destroy(EquipmentManager.instance.gameObject);
+
+        if(Inventario.instance != null)
+            Destroy(Inventario.instance.gameObject);
+        
+        if(InventarioUI.instance != null)  
+            Destroy(InventarioUI.instance.gameObject);
+            
         LoadLevelByIndex(SaveSystem.LoadScene());
         LoadedCheck.instance.loaded = true;
     }
@@ -113,7 +121,6 @@ public class LevelLoader : MonoBehaviour
     public void KillPlayer(){
 
         // Tener en cuenta checkpoints
-        
 
         AudioManager.instance.Stop("GameOver");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -127,6 +134,14 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex){
         // Lanzar la animacion
         if(levelIndex != 0){
+            if(SceneManager.GetActiveScene().buildIndex != 0){
+                GameObject havook = GameObject.Find("Havook");
+                GameObject rightH = havook.transform.GetChild(1).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(3).GetChild(0).GetChild(0).GetChild(0).gameObject;
+                GameObject leftH = havook.transform.GetChild(1).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(0).gameObject;
+                GameObject bodyItems = havook.transform.GetChild(1).GetChild(0).gameObject;
+
+                SaveSystem.SaveInventoryObjects(bodyItems, rightH, leftH, true);
+            }
             transition.SetTrigger("Start");
 
             // Esperar a la transicion

@@ -8,6 +8,7 @@ public class Consumable : Item
 {
     public BuffType type;
     public int increment;
+    public GameObject destroyable;
 
     public override void Use()
     {
@@ -19,6 +20,10 @@ public class Consumable : Item
                 stats.IncreaseHealth(increment);
             }
 
+            if(destroyable != null){
+                Destroy(destroyable);
+            }
+            
             RemoveFromInventory();
         }
     }

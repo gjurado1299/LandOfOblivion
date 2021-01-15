@@ -22,4 +22,4 @@ MonoBehaviour:
   armorModifier: 20
   damageModifier: 0
   speedModifier: 0
-  blockModifier: 60
+  blockModifier: 40

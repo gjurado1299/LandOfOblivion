@@ -10,6 +10,9 @@ public class ItemPickUp : MonoBehaviour
     
     public void PickUp()
     {
+        if(item.GetType() == typeof(Consumable)){
+            ((Consumable) item).destroyable = this.gameObject;
+        }
 
         bool wasPickedUp = Inventario.instance.Add(item);
 
@@ -40,6 +43,12 @@ public class ItemPickUp : MonoBehaviour
                 player.quest.AdjustQuantity();
                 picked = true;
                 GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadLevelByIndex(2);
+
+            }else if(gameObject.name == "Mithril" && picked == false){
+                Player player = GameObject.Find("Havook").GetComponent<Player>();
+                player.quest.completedText = "Vuelve con Harald";
+                picked = true;
+                GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadLevelByIndex(4);
             }
         }
     } 

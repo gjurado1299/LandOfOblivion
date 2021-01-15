@@ -8,16 +8,20 @@ public class BarraVida : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+    public bool boss = false;
 
     public void SetMaxHealth(int health){
         slider.maxValue = health;
         slider.value = health;
 
-        fill.color = gradient.Evaluate(1f);
+        if(boss == false)
+            fill.color = gradient.Evaluate(1f);
     }
 
     public void SetHealth(int health){
+        
         slider.value = health;
-        fill.color = gradient.Evaluate(slider.normalizedValue);
+        if(boss == false)
+            fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 }

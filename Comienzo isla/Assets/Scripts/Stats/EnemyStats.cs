@@ -10,8 +10,12 @@ public class EnemyStats : CharacterStats
     WaveManager waveManager;
 
     public GameObject loot;
+    public bool boss = false;
+    bool enraged = false;
+    public bool copy = false;
+    public float enragedPerc = .25f;
     public float probDrop;
-    
+    public float attackRange = 5f;
 
     public override void Die(){
         base.Die();
@@ -25,7 +29,18 @@ public class EnemyStats : CharacterStats
     }
 
     void Update(){
-        
+
+        if(boss == true && enraged == false){
+            if(isEnraged(enragedPerc) == true){
+                gameObject.GetComponent<Animator>().SetBool("IsEnraged", true);
+                attackRange = 8f;
+                damage.AddModifier(20);
+                enraged = true;
+            }
+        }
+
+        CheckBar();
+
         if(waitBool == true){
             Destroy(gameObject);
             waitBool = false;
@@ -33,7 +48,11 @@ public class EnemyStats : CharacterStats
             // Soltar loot
             
             if(Random.Range(0f, 1.0f) < probDrop){
-                Instantiate(loot, gameObject.transform.position, Quaternion.identity);
+                if(copy == true){
+                    Instantiate(loot, gameObject.transform.position, Quaternion.identity);
+                }else{
+                    loot.transform.position = gameObject.transform.position;
+                }
             }
 
             if(waveManager != null){
@@ -43,7 +62,11 @@ public class EnemyStats : CharacterStats
     }
 
     IEnumerator DeadEnemy(){
-        gameObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Die");
+        if(boss == true)   {
+            gameObject.GetComponent<Animator>().SetTrigger("Die");
+        }else{
+            gameObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Die");
+        }
         yield return new WaitForSeconds(3);
         waitBool = true;
     }

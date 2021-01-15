@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(animatorPlayer.GetCurrentAnimatorStateInfo(0).IsName("Death") == true)
+            bloqueado = true;
+            
         if(inventarioUI == null){
             inventarioUI = InventarioUI.instance.gameObject;
             inventarioUI.SetActive(false);
@@ -68,6 +71,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void PauseMenu(){
+        inventarioUI.SetActive(false);
         pauseUI.SetActive(!pauseUI.activeSelf);
 
         if(pauseUI.activeSelf)

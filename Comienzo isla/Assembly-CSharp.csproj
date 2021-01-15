@@ -95,6 +95,8 @@
      <Compile Include="Assets\Scripts\Extra\StartBossFight.cs" />
      <Compile Include="Assets\Scripts\Extra\StartMission.cs" />
      <Compile Include="Assets\Scripts\Guardado\DialogueTriggerData.cs" />
+     <Compile Include="Assets\Scripts\Guardado\GameObjectSaveData.cs" />
+     <Compile Include="Assets\Scripts\Guardado\InventoryObjectData.cs" />
      <Compile Include="Assets\Scripts\Guardado\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Guardado\QuestData.cs" />
      <Compile Include="Assets\Scripts\Guardado\QuestGoalData.cs" />

@@ -7,12 +7,14 @@ public class Boss_walk : StateMachineBehaviour
     public float speed = 2.5f;
     Transform player;
     Rigidbody rb;
+    EnemyStats stats;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody>();
+        stats = animator.GetComponent<EnemyStats>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -27,11 +29,15 @@ public class Boss_walk : StateMachineBehaviour
         rb.rotation = Quaternion.Slerp(rb.rotation, lookRotation, Time.deltaTime * 5f);
         rb.MovePosition(newP);
 
+        if(Vector3.Distance(player.position, rb.position) <= stats.attackRange){
+            animator.SetTrigger("Attack");
+        }
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        animator.ResetTrigger("Attack");
     }
 }
