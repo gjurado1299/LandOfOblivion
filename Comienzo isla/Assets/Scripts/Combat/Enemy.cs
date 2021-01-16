@@ -26,4 +26,8 @@ public class Enemy : MonoBehaviour
             playerCombat.Attack(myStats);
         }
     }
+
+    public void BossKilled(){
+        player.GetComponent<Player>().quest.goal.EnemyKilled();
+    }
 }

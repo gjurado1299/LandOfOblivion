@@ -7,6 +7,8 @@ public class Dialogue
 {
     public bool inicioMision;
     public bool helper;
+    public bool unico;
+
 
     [TextArea(3,10)]
     public string[] sentences;

@@ -12,7 +12,6 @@ public class EnemyStats : CharacterStats
     public GameObject loot;
     public bool boss = false;
     bool enraged = false;
-    public bool copy = false;
     public float enragedPerc = .25f;
     public float probDrop;
     public float attackRange = 5f;
@@ -48,11 +47,8 @@ public class EnemyStats : CharacterStats
             // Soltar loot
             
             if(Random.Range(0f, 1.0f) < probDrop){
-                if(copy == true){
-                    Instantiate(loot, gameObject.transform.position, Quaternion.identity);
-                }else{
-                    loot.transform.position = gameObject.transform.position;
-                }
+                GameObject instanciado = Instantiate(loot, gameObject.transform.position, Quaternion.identity);
+                instanciado.name = loot.name;
             }
 
             if(waveManager != null){
@@ -62,7 +58,7 @@ public class EnemyStats : CharacterStats
     }
 
     IEnumerator DeadEnemy(){
-        if(boss == true)   {
+        if(boss == true || gameObject.name == "Skeleton")   {
             gameObject.GetComponent<Animator>().SetTrigger("Die");
         }else{
             gameObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Die");

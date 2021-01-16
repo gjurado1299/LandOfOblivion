@@ -20,6 +20,13 @@ public class Player : MonoBehaviour
 
         stats = gameObject.GetComponent<PlayerStats>();
 
+        if(quest.isActive && quest.goal.IsReached() && SceneManager.GetActiveScene().buildIndex == 4){
+            Vector3 position = new Vector3(42.78f, 21.95f, 43.24f);
+            gameObject.SetActive(false);
+            gameObject.transform.position = position;
+            gameObject.SetActive(true);
+        }
+
         if(LoadedCheck.instance != null){
             if(LoadedCheck.instance.loaded == true){
                 LoadPlayer(true);
@@ -96,8 +103,6 @@ public class Player : MonoBehaviour
         GameObject bodyItems = gameObject.transform.GetChild(1).GetChild(0).gameObject;
         InventoryObjectData inv = null;
         Vector3 position;
-        Vector3 rotation;
-
 
         if(loadAll == true){
             PlayerData data = SaveSystem.LoadPlayer();
@@ -132,20 +137,12 @@ public class Player : MonoBehaviour
             weapon.transform.GetChild(0).gameObject.SetActive(false);
             weapon.GetComponent<Rigidbody>().isKinematic = true;
 
-            position.x = obj.position[0];
-            position.y = obj.position[1];
-            position.z = obj.position[2];
-
-            rotation.x = obj.rotation[0];
-            rotation.y = obj.rotation[1];
-            rotation.z = obj.rotation[2];
-
-            weapon.SetActive(false);
-            weapon.transform.position = position;
-            weapon.transform.localEulerAngles = rotation;
-            weapon.SetActive(obj.activeSelf);
-
             Item item = weapon.GetComponent<ItemPickUp>().item;
+            
+            weapon.SetActive(false);
+            weapon.transform.localPosition = item.PickPosition;
+            weapon.transform.localEulerAngles = item.PickRotation;
+            weapon.SetActive(obj.activeSelf);
             
             if(obj.activeSelf){
                 EquipmentManager.instance.Equip((Equipment) item);
@@ -162,20 +159,13 @@ public class Player : MonoBehaviour
             weapon.transform.GetChild(0).gameObject.SetActive(false);
             weapon.GetComponent<Rigidbody>().isKinematic = true;
 
-            position.x = obj.position[0];
-            position.y = obj.position[1];
-            position.z = obj.position[2];
-
-            rotation.x = obj.rotation[0];
-            rotation.y = obj.rotation[1];
-            rotation.z = obj.rotation[2];
+            Item item = weapon.GetComponent<ItemPickUp>().item;
             
             weapon.SetActive(false);
-            weapon.transform.position = position;
-            weapon.transform.localEulerAngles = rotation;
+            weapon.transform.localPosition = item.PickPosition;
+            weapon.transform.localEulerAngles = item.PickRotation;
             weapon.SetActive(obj.activeSelf);
 
-            Item item = weapon.GetComponent<ItemPickUp>().item;
             
             if(obj.activeSelf){
                 EquipmentManager.instance.Equip((Equipment) item);
@@ -196,23 +186,16 @@ public class Player : MonoBehaviour
             item.name = obj.id;
             item.transform.SetParent(bodyItems.transform);
 
+            Item itemPick = item.GetComponent<ItemPickUp>().item;
+
             item.transform.GetChild(0).gameObject.SetActive(false);
             item.GetComponent<Rigidbody>().isKinematic = true;
-
-            position.x = obj.position[0];
-            position.y = obj.position[1];
-            position.z = obj.position[2];
-
-            rotation.x = obj.rotation[0];
-            rotation.y = obj.rotation[1];
-            rotation.z = obj.rotation[2];
             
             item.SetActive(false);
-            item.transform.position = position;
-            item.transform.localEulerAngles = rotation;
+            item.transform.localPosition = itemPick.PickPosition;
+            item.transform.localEulerAngles = itemPick.PickRotation;
             item.SetActive(obj.activeSelf);
 
-            Item itemPick = item.GetComponent<ItemPickUp>().item;
             Inventario.instance.Add(itemPick);
         }
     }

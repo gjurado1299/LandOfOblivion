@@ -15,6 +15,7 @@ public class EquipmentManager : MonoBehaviour
     {
         if(instance != null)
         {
+            //instance.ResetAllEquipment();
             Destroy(this.gameObject);
             return;
         }
@@ -54,6 +55,17 @@ public class EquipmentManager : MonoBehaviour
 
     }
 
+    void ResetAllEquipment(){
+        // Ajuste de equipamiento para las animaciones de armas (un simple re-equipado al iniciar la escena)
+        for (int i = 0; i < currentEquipment.Length; i++)
+        {
+            Equipment current = currentEquipment[i];
+            if(current != null){
+                UnEquip(i);
+                Equip(current);
+            }
+        }
+    }
 
     public void Equip (Equipment newItem)
     {
@@ -301,8 +313,15 @@ public class EquipmentManager : MonoBehaviour
         GameObject bodyItems = GameObject.Find("Havook").transform.GetChild(1).GetChild(0).gameObject;
 
         for (int i = bodyItems.transform.childCount-1; i >= 0; i--){
-            ItemPickUp item = bodyItems.transform.GetChild(i).gameObject.GetComponent<ItemPickUp>();
+            Transform child = bodyItems.transform.GetChild(i);
+            ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
             if(item != null){
+                int index = SceneManager.GetActiveScene().buildIndex;
+                    
+                if(index == 5 || index == 6){
+                    child.localScale = new Vector3((child.localScale.x*3/2), (child.localScale.y*3/2), (child.localScale.z*3/2));
+                }
+
                 item.gameObject.transform.parent = items.transform; 
                 item.gameObject.transform.localPosition = zero;
                 item.gameObject.transform.localEulerAngles = zero;
@@ -354,6 +373,10 @@ public class EquipmentManager : MonoBehaviour
         if(items){
             for (int i = items.transform.childCount-1; i >= 0; i--){
                 Transform child = items.transform.GetChild(i);
+                int index = SceneManager.GetActiveScene().buildIndex;
+                if(index == 5 || index == 6){
+                    child.localScale = new Vector3((child.localScale.x*2/3), (child.localScale.y*2/3), (child.localScale.z*2/3));
+                }
                 child.parent = bodyItems.transform;
             }
             Destroy(items);

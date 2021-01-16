@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BatallaFinal.unity
     guid: 4427b75e149d79c4fb285b01896b631b
+  - enabled: 1
+    path: Assets/Scenes/EscenaFinal.unity
+    guid: 8e90dc4dec4090c42857485a825b26c3
   m_configObjects: {}

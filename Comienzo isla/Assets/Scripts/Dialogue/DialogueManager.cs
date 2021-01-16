@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
 
     bool inicioMision = false;
     bool helper = false;
+    bool unico = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class DialogueManager : MonoBehaviour
         names.Clear();
         inicioMision = dialogue.inicioMision;
         helper = dialogue.helper;
+        unico = dialogue.unico;
 
         foreach (string sentence in dialogue.sentences){
             sentences.Enqueue(sentence);
@@ -78,6 +80,9 @@ public class DialogueManager : MonoBehaviour
         if(!helper){
             if(inicioMision == true){
                 panelMision.Invoke();
+            }else if(unico == true){
+                // hacer algo
+                gameManager.bloqueado = false;
             }else{
                 panelRecompensa.Invoke();
             }

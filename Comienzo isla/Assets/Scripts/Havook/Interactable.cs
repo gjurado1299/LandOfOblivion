@@ -20,6 +20,7 @@ public class Interactable : MonoBehaviour
     public Animator animatorDialogo;
     public string type;
     bool recolocado = false;
+    public bool singleDialogue = false;
 
     Player jugadorScript;
     animationStateController animadorJugador;
@@ -77,17 +78,21 @@ public class Interactable : MonoBehaviour
                 {
 
                     // Posicionamos al jugador enfrente del NPC
-                    jugador.SetActive(false);
-                    jugador.transform.position = posicionDialogo;
-                    jugador.transform.rotation = rotacionDialogo;
-                    recolocado = true;
-                    jugador.SetActive(true);
+                    if(singleDialogue == false){
+                        jugador.SetActive(false);
+                        jugador.transform.position = posicionDialogo;
+                        jugador.transform.rotation = rotacionDialogo;
+                        jugador.SetActive(true);
+                    }
                    
                     interactAction.Invoke(); 
+                    recolocado = true;
                     
-                    // Activamos cámara de diálogo
-                    camaraDialogo.gameObject.SetActive(true);
-                    camaraPrincipal.gameObject.SetActive(false);
+                    if(singleDialogue == false){
+                        // Activamos cámara de diálogo
+                        camaraDialogo.gameObject.SetActive(true);
+                        camaraPrincipal.gameObject.SetActive(false);
+                    }
                 }
             }else if(type == "enemy"){
                 if(Input.GetMouseButtonDown(0)){

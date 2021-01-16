@@ -10721,7 +10721,7 @@ MonoBehaviour:
   spawnDelay: 1.2
   roundDelay: 5
   enemyIncreaseFactor: 2
-  numberOfWaves: 2
+  numberOfWaves: 5
   enemy: {fileID: 214564580}
   keyInteractable: {fileID: 2008200999}
   efecto: {fileID: 1962278091}
@@ -11617,7 +11617,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943403072}
-  m_LocalRotation: {x: 0.20664765, y: -0.01587091, z: 0.0033524993, w: 0.97828096}
+  m_LocalRotation: {x: 0.20664155, y: -0.017562272, z: 0.0037097747, w: 0.97825205}
   m_LocalPosition: {x: -9.570003, y: 3.5294888, z: -8.238859}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -20768,37 +20768,37 @@ PrefabInstance:
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20664762
+      value: 0.20664151
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.01587089
+      value: -0.01756225
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.003352418
+      value: 0.0037096932
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.978281
+      value: 0.9782521
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23157842
+      value: 0.23157841
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000011732391
+      value: 0.000000025428472
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000054414167
+      value: -0.0000000034047074
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}

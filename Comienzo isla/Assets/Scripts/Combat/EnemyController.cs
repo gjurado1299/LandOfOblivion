@@ -23,7 +23,10 @@ public class EnemyController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         stats = GetComponent<CharacterStats>();
         combat = GetComponent<CharacterCombat>();
-        enemyAnimator = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+        if(gameObject.name == "Skeleton")
+            enemyAnimator = gameObject.GetComponent<Animator>();
+        else
+            enemyAnimator = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
