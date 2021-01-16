@@ -96,6 +96,8 @@ public class LevelLoader : MonoBehaviour
         AudioManager.instance.Stop("Bibury");
         AudioManager.instance.Stop("TierrasPerdidas");
         AudioManager.instance.Stop("InicioOleadas");
+        AudioManager.instance.Stop("CreditsTheme");
+        
         AudioManager.instance.Play("MainTheme");
         StartCoroutine(LoadLevel(0));
     }

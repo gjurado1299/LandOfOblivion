@@ -708,7 +708,7 @@ MonoBehaviour:
   armor:
     baseValue: 0
   attackSpeed:
-    baseValue: 1
+    baseValue: 2
   block:
     baseValue: 0
   blocking: 0

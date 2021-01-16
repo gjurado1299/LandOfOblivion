@@ -146,3 +146,15 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: BossTheme
+    clip: {fileID: 8300000, guid: f2ca1c61b5cfde84487fd8e4b7b2b9ba, type: 3}
+    volume: 0.06
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: CreditsTheme
+    clip: {fileID: 8300000, guid: db1c93a6efe2c6f45923fd4641074569, type: 3}
+    volume: 0.06
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

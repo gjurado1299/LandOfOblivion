@@ -18,11 +18,14 @@ public class DialogueManager : MonoBehaviour
     public UnityEvent panelMision;
     public UnityEvent panelRecompensa;
 
+    public UnityEvent dialogoUnico;
+
     public GameManager gameManager;
 
     bool inicioMision = false;
     bool helper = false;
     bool unico = false;
+    public bool escenaFinal = false;
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +85,11 @@ public class DialogueManager : MonoBehaviour
                 panelMision.Invoke();
             }else if(unico == true){
                 // hacer algo
-                gameManager.bloqueado = false;
+                dialogoUnico.Invoke();
+                if(escenaFinal == false){
+                    gameManager.bloqueado = false;
+                }
+
             }else{
                 panelRecompensa.Invoke();
             }

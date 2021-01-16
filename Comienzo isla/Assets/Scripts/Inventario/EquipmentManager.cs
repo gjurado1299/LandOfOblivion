@@ -198,7 +198,7 @@ public class EquipmentManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.U))
             UnEquipAll();
 
-        if(SceneManager.GetActiveScene().buildIndex != 0 && bodyParts[0] == null){
+        if(SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 8 && bodyParts[0] == null){
             findBodyparts();
             SetGameObjects();
         }

@@ -44,6 +44,8 @@ public class AudioManager : MonoBehaviour
             Play("TierrasPerdidas");
         else if(index == 5)
             Play("InicioOleadas");
+        else if(index == 8)
+            Play("CreditsTheme");
     }
 
     public void Play(string name){
