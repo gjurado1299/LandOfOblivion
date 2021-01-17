@@ -93,13 +93,11 @@ public class animationStateController : MonoBehaviour
 
     void PlayingBlock(int value){
         if(value == 1){
-            gameManager.bloqueado = true;
             AudioManager.instance.StopWalking();
             animator.SetBool("PlayingBlock", true);
         }
         else{
             animator.SetBool("PlayingBlock", false);
-            gameManager.bloqueado = false;
         }
     }
 }

@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72d1eef5c5c74d34da6a4b657588bce7, type: 3}
-  m_Name: Pocion de Curacion
+  m_Name: Pocion de Fuerza
   m_EditorClassIdentifier: 
-  name: Pocion de Curacion
-  icon: {fileID: 21300000, guid: e52ea25af699fd445b7046374f81a5b9, type: 3}
+  name: Pocion de Fuerza
+  icon: {fileID: 21300000, guid: f6c05ef1360e24443b9355fdb3aa9627, type: 2}
   isDefaultItem: 0
-  infoPick: "Una poci\xF3n que restaura parte de la vida de Havook. Click para consumir."
+  infoPick: "Poci\xF3n que aumenta tu da\xF1o considerablemente durante un breve
+    periodo de tiempo."
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
-  type: 0
-  increment: 30
-  time: 0
+  type: 1
+  increment: 15
+  time: 10
   destroyable: {fileID: 0}

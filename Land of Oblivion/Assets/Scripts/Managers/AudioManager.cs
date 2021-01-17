@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
         if(index == 0)
             Play("MainTheme");
         else if(index == 1)
-            Play("Tutorial");
+            Play("Thunder");
         else if(index == 2)
             Play("Bibury");
         else if(index == 3)
@@ -44,6 +44,10 @@ public class AudioManager : MonoBehaviour
             Play("TierrasPerdidas");
         else if(index == 5)
             Play("InicioOleadas");
+        else if(index == 6)
+            Play("InicioOleadas");
+        else if(index == 7)
+            Play("Bibury");
         else if(index == 8)
             Play("CreditsTheme");
     }

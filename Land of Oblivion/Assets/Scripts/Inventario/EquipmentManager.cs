@@ -15,7 +15,7 @@ public class EquipmentManager : MonoBehaviour
     {
         if(instance != null)
         {
-            //instance.ResetAllEquipment();
+            //instance.UnEquipAll();
             Destroy(this.gameObject);
             return;
         }

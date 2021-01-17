@@ -37,6 +37,7 @@ public class PlayerStats : CharacterStats
 
         this.gameObject.GetComponent<Animator>().SetTrigger("IsDead");
         gameManager.bloqueado = true;
+        LoadedCheck.instance.died = true;
 
         StartCoroutine(GameOverPanel());
     }

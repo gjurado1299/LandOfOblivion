@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(Input.GetButtonDown("Pause"))
+        if(Input.GetButtonDown("Pause") && (pauseUI.activeSelf || bloqueado == false))
         {
             PauseMenu();
         }
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         inventarioUI.SetActive(false);
         pauseUI.SetActive(!pauseUI.activeSelf);
 
-        if(pauseUI.activeSelf)
+        if(pauseUI.activeSelf )
         {
             bloqueado = true;
             Time.timeScale=0;

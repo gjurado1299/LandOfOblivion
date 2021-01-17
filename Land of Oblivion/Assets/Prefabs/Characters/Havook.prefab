@@ -4858,16 +4858,19 @@ MonoBehaviour:
       firstDialogue:
         inicioMision: 0
         helper: 0
+        unico: 0
         sentences: []
         names: []
       helper:
         inicioMision: 0
         helper: 0
+        unico: 0
         sentences: []
         names: []
       endingDialogue:
         inicioMision: 0
         helper: 0
+        unico: 0
         sentences: []
         names: []
     goal:
@@ -4891,14 +4894,19 @@ MonoBehaviour:
   maxHealth: 100
   damage:
     baseValue: 1
+    damageBuff: 0
   armor:
     baseValue: 0
+    damageBuff: 0
   attackSpeed:
     baseValue: 1
+    damageBuff: 0
   block:
     baseValue: 20
+    damageBuff: 0
   blocking: 0
   barraVida: {fileID: 0}
+  buffed: 0
   GameOver: {fileID: 0}
 --- !u!114 &2230038996277233044
 MonoBehaviour:
@@ -6987,7 +6995,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 512
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: c55f2960fd391c643be01011033ebd4b, type: 2}
   m_TargetDisplay: 0

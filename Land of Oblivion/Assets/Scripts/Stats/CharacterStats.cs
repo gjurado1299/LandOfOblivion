@@ -14,6 +14,14 @@ public class CharacterStats : MonoBehaviour
     public bool blocking = false;
     public BarraVida barraVida;
     Animator animator;
+    GameManager gm;
+
+    [HideInInspector]
+    public bool buffed = false;
+    
+    float timeBuffed = 0f;
+    float lastTimeBuffed = 0f;
+    bool bloqueado = false;
 
     public event System.Action<int, int> OnHealthChanged;
 
@@ -24,15 +32,30 @@ public class CharacterStats : MonoBehaviour
         }
 
         animator = gameObject.GetComponent<Animator>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void Update(){
         CheckBar();
 
-        if(Input.GetMouseButton(1))
+        // Checkear tiempo de daño
+        if(Time.time - lastTimeBuffed > timeBuffed && buffed == true){
+            damage.damageBuff = 0;
+            buffed = false;
+        }
+
+        if(Input.GetMouseButton(1) && (gm.bloqueado == false || blocking == true)){
             blocking = true;
-        else
+            gm.bloqueado = true;
+            bloqueado = true;
+        }
+        else{
             blocking = false;
+            if(bloqueado == true){
+                gm.bloqueado = false;
+                bloqueado = false;
+            }
+        }
         
     }
     
@@ -73,6 +96,13 @@ public class CharacterStats : MonoBehaviour
         currentHealth += increment;
         if(currentHealth > maxHealth)
             currentHealth = maxHealth;
+    }
+
+    public void IncreaseDamage(int increment, float time){
+        lastTimeBuffed = Time.time;
+        timeBuffed = time;
+        damage.damageBuff = increment;
+        buffed = true;
     }
 
     public bool isEnraged(float percentage){

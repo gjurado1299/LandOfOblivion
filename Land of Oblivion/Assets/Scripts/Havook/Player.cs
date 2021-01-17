@@ -142,6 +142,12 @@ public class Player : MonoBehaviour
             weapon.SetActive(false);
             weapon.transform.localPosition = item.PickPosition;
             weapon.transform.localEulerAngles = item.PickRotation;
+
+            int index = SceneManager.GetActiveScene().buildIndex;
+            if(index == 5 || index == 6){
+                weapon.transform.localScale = new Vector3((weapon.transform.localScale.x*2/3), (weapon.transform.localScale.y*2/3), (weapon.transform.localScale.z*2/3));
+            }
+
             weapon.SetActive(obj.activeSelf);
             
             if(obj.activeSelf){
@@ -164,6 +170,12 @@ public class Player : MonoBehaviour
             weapon.SetActive(false);
             weapon.transform.localPosition = item.PickPosition;
             weapon.transform.localEulerAngles = item.PickRotation;
+
+            int index = SceneManager.GetActiveScene().buildIndex;
+            if(index == 5 || index == 6){
+                weapon.transform.localScale = new Vector3((weapon.transform.localScale.x*2/3), (weapon.transform.localScale.y*2/3), (weapon.transform.localScale.z*2/3));
+            }
+
             weapon.SetActive(obj.activeSelf);
 
             
@@ -194,6 +206,12 @@ public class Player : MonoBehaviour
             item.SetActive(false);
             item.transform.localPosition = itemPick.PickPosition;
             item.transform.localEulerAngles = itemPick.PickRotation;
+
+            int index = SceneManager.GetActiveScene().buildIndex;
+            if(index == 5 || index == 6){
+                item.transform.localScale = new Vector3((item.transform.localScale.x*2/3), (item.transform.localScale.y*2/3), (item.transform.localScale.z*2/3));
+            }
+
             item.SetActive(obj.activeSelf);
 
             Inventario.instance.Add(itemPick);

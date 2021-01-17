@@ -8,10 +8,13 @@ public class Stat
     [SerializeField]
     private int baseValue = 0;
 
+    [HideInInspector]
+    public int damageBuff = 0;
+
     private List<int> modifiers = new List<int>();
 
     public int GetValue(){
-        int finalValue = baseValue;
+        int finalValue = baseValue + damageBuff;
 
         modifiers.ForEach(x => finalValue += x);
         return finalValue;
@@ -24,7 +27,7 @@ public class Stat
     }
 
     public void RemoveModifier(int modifier){
-        if( modifier != 0){
+        if(modifier != 0){
             modifiers.Remove(modifier);
         }
     }

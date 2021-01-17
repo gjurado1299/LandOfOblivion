@@ -11,6 +11,7 @@ public class ItemPickUp : MonoBehaviour
     public void PickUp()
     {
         if(item.GetType() == typeof(Consumable)){
+            Debug.Log("ASIGNANDO CONSUMIBLE");
             ((Consumable) item).destroyable = this.gameObject;
         }
 

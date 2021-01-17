@@ -30,11 +30,23 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
-        names = new Queue<string>();
+        if(sentences == null)
+            sentences = new Queue<string>();
+            
+        if(names == null)
+            names = new Queue<string>();
     }
 
     public void StartDialogue(Dialogue dialogue){
+
+        if(sentences == null){
+            sentences = new Queue<string>();
+        }
+
+        if(names == null){
+            names = new Queue<string>();
+        }
+
         animatorDialogue.SetBool("IsOpen", true);
         animatorPlayer.SetBool("IsMoving", false);
         gameManager.bloqueado = true;

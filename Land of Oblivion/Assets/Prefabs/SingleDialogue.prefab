@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5113191753851714386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5113191753851714388}
+  - component: {fileID: 5113191753851714389}
+  m_Layer: 0
+  m_Name: SingleDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5113191753851714388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5113191753851714386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 73.53134, y: 15.765878, z: 145.86508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5113191753851714389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5113191753851714386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ec493904f07914ca28867fbd685c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    inicioMision: 0
+    helper: 0
+    unico: 1
+    sentences:
+    - "Havook, aqu\xED tienes tu barco. Te lo hemos reparado, est\xE1 listo para
+      zarpar"
+    - "Muchas gracias por la ayuda Harald, podr\xE9 seguir mi destino."
+    - "Cu\xE9ntame Havook, \xBFporqu\xE9 te exiliaron?"
+    - "Ver\xE1s Harald, es una larga historia..."
+    - "Desobedec\xED las ordenes de mi rey con las que no estaba de acuerdo, para
+      proteger a un ser querido..."
+    - "Decid\xED viajar sin rumbo, y descubrir nuevas tierras, pero no esperaba esta
+      aventura..."
+    - "Siempre tendr\xE1s un lugar aqui, Havook."
+    - "Lo s\xE9, amigo."
+    - "Muchas gracias por todo, Bibury prosperar\xE1 ahora que la amenaza de Rendskull
+      ha terminado."
+    - "No te deprimas, Harald... \xBFQui\xE9n sabe si otra tormenta me traer\xE1
+      de vuelta? El destino es caprichoso."
+    - "Hasta la pr\xF3xima."
+    names:
+    - Harald
+    - Havook
+    - Harald
+    - Havook
+    - Havook
+    - Havook
+    - Harald
+    - Havook
+    - Harald
+    - Havook
+    - Harald

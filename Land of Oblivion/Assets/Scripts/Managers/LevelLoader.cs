@@ -73,6 +73,14 @@ public class LevelLoader : MonoBehaviour
             stats = havook.GetComponent<PlayerStats>();
             player.SavePlayerPrefs();
 
+            if(SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 7){
+                GameObject rightH = havook.transform.GetChild(1).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(3).GetChild(0).GetChild(0).GetChild(0).gameObject;
+                GameObject leftH = havook.transform.GetChild(1).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(0).gameObject;
+                GameObject bodyItems = havook.transform.GetChild(1).GetChild(0).gameObject;
+
+                SaveSystem.SaveInventoryObjects(bodyItems, rightH, leftH, true);
+            }
+
             if(EquipmentManager.instance != null)
                 EquipmentManager.instance.SaveGameObjects();
 
@@ -111,6 +119,14 @@ public class LevelLoader : MonoBehaviour
             stats = havook.GetComponent<PlayerStats>();
             player.SavePlayerPrefs();
 
+            if(SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 7){
+                GameObject rightH = havook.transform.GetChild(1).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(3).GetChild(0).GetChild(0).GetChild(0).gameObject;
+                GameObject leftH = havook.transform.GetChild(1).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(0).gameObject;
+                GameObject bodyItems = havook.transform.GetChild(1).GetChild(0).gameObject;
+
+                SaveSystem.SaveInventoryObjects(bodyItems, rightH, leftH, true);
+            }
+
             if(EquipmentManager.instance != null)
                 EquipmentManager.instance.SaveGameObjects();
 
@@ -124,26 +140,28 @@ public class LevelLoader : MonoBehaviour
 
         // Tener en cuenta checkpoints
 
+        if(EquipmentManager.instance != null)
+            Destroy(EquipmentManager.instance.gameObject);
+
+        if(Inventario.instance != null)
+            Destroy(Inventario.instance.gameObject);
+            
+        if(InventarioUI.instance != null){
+            Destroy(InventarioUI.instance.gameObject);
+        }
+
         AudioManager.instance.Stop("GameOver");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitGame(){
-        Debug.Log("QUIT!");
         Application.Quit();
     }
 
     IEnumerator LoadLevel(int levelIndex){
         // Lanzar la animacion
         if(levelIndex != 0){
-            if(SceneManager.GetActiveScene().buildIndex != 0){
-                GameObject havook = GameObject.Find("Havook");
-                GameObject rightH = havook.transform.GetChild(1).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(3).GetChild(0).GetChild(0).GetChild(0).gameObject;
-                GameObject leftH = havook.transform.GetChild(1).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(0).gameObject;
-                GameObject bodyItems = havook.transform.GetChild(1).GetChild(0).gameObject;
-
-                SaveSystem.SaveInventoryObjects(bodyItems, rightH, leftH, true);
-            }
+            
             transition.SetTrigger("Start");
 
             // Esperar a la transicion

@@ -52,7 +52,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: GameOver
     clip: {fileID: 8300000, guid: ac1e686854c3bb844ae51e151d4f3b48, type: 3}
-    volume: 0.407
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -154,6 +154,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CreditsTheme
     clip: {fileID: 8300000, guid: db1c93a6efe2c6f45923fd4641074569, type: 3}
+    volume: 0.06
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Thunder
+    clip: {fileID: 8300000, guid: 32cfc5144b594f243b3bba76350a28ae, type: 3}
     volume: 0.06
     pitch: 1
     loop: 1

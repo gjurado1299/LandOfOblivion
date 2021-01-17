@@ -331,7 +331,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stab Attack
-  m_Speed: 1
+  m_Speed: 1.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101231096683289294}
@@ -390,10 +390,10 @@ AnimatorStateMachine:
     m_Position: {x: 730, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102388722941686956}
-    m_Position: {x: 420, y: 110, z: 0}
+    m_Position: {x: 260, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102766697451408136}
-    m_Position: {x: 720, y: 120, z: 0}
+    m_Position: {x: 730, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102843847374348448}
     m_Position: {x: -252, y: 192, z: 0}
