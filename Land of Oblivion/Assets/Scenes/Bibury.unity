@@ -4621,7 +4621,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522811750}
-  m_LocalRotation: {x: 0.20481187, y: -0.015889345, z: 0.003325265, w: 0.9786668}
+  m_LocalRotation: {x: 0.20480895, y: -0.01672492, z: 0.003500131, w: 0.9786529}
   m_LocalPosition: {x: 90.54, y: 26.95, z: 50.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6845,12 +6845,12 @@ PrefabInstance:
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.helper.sentences.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.helper.names.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
@@ -7101,22 +7101,22 @@ PrefabInstance:
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.helper.sentences.Array.data[1]
-      value: '!!!!'
+      value: "Ve hacia el norte, llegar\xE1s a las tierras perdidas."
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.helper.sentences.Array.data[2]
-      value: '!!!!'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.helper.sentences.Array.data[3]
-      value: '!!!!'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.helper.sentences.Array.data[4]
-      value: '!!!!'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
@@ -10838,27 +10838,27 @@ PrefabInstance:
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20481184
+      value: 0.20480894
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0033251974
+      value: 0.0035000637
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.015889328
+      value: -0.016724903
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9786668
+      value: 0.9786529
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000042375325
+      value: 0.000000004237495
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -10878,7 +10878,7 @@ PrefabInstance:
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018679668
+      value: -0.000000018679657
       objectReference: {fileID: 0}
     - target: {fileID: 7398823824547757384, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -10973,12 +10973,12 @@ PrefabInstance:
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001575575
+      value: 0.000000018001536
       objectReference: {fileID: 0}
     - target: {fileID: 7398823825181073434, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000023283055
+      value: -0.000000009012918
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 505023da209fd3545be1f4902bc0872a, type: 3}

@@ -148,13 +148,8 @@ public class Player : MonoBehaviour
                 weapon.transform.localScale = new Vector3((weapon.transform.localScale.x*2/3), (weapon.transform.localScale.y*2/3), (weapon.transform.localScale.z*2/3));
             }
 
-            weapon.SetActive(obj.activeSelf);
+            Inventario.instance.Add(item);
             
-            if(obj.activeSelf){
-                EquipmentManager.instance.Equip((Equipment) item);
-            }else{
-                Inventario.instance.Add(item);
-            }
         }
 
         foreach(GameObjectSaveData obj in inv.equipmentLeftHand){
@@ -176,14 +171,7 @@ public class Player : MonoBehaviour
                 weapon.transform.localScale = new Vector3((weapon.transform.localScale.x*2/3), (weapon.transform.localScale.y*2/3), (weapon.transform.localScale.z*2/3));
             }
 
-            weapon.SetActive(obj.activeSelf);
-
-            
-            if(obj.activeSelf){
-                EquipmentManager.instance.Equip((Equipment) item);
-            }else{
-                Inventario.instance.Add(item);
-            }
+            Inventario.instance.Add(item);
         }
 
         foreach(GameObjectSaveData obj in inv.inventoryItems){
@@ -194,6 +182,7 @@ public class Player : MonoBehaviour
                 }
             }
 
+            Debug.Log(obj.id);
             GameObject item = Instantiate(Resources.Load("Props/"+obj.id)) as GameObject;
             item.name = obj.id;
             item.transform.SetParent(bodyItems.transform);
@@ -212,9 +201,14 @@ public class Player : MonoBehaviour
                 item.transform.localScale = new Vector3((item.transform.localScale.x*2/3), (item.transform.localScale.y*2/3), (item.transform.localScale.z*2/3));
             }
 
-            item.SetActive(obj.activeSelf);
-
             Inventario.instance.Add(itemPick);
+        }
+
+        if(loadAll == true){            
+            //Si has loadeado partida, guardamos los nuevos playerprefs que se cargaran si mueres
+            SaveSystem.SaveInventoryObjects(bodyItems, rightH, leftH, true);
+            SavePlayerPrefs();
+            stats.SavePlayerPrefs();
         }
     }
 }

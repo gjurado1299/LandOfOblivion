@@ -96,7 +96,6 @@ public class Interactable : MonoBehaviour
                 }
             }else if(type == "enemy"){
                 if(Input.GetMouseButtonDown(0)){
-                    //Comprobacion de rotacion de havook??Vale
                     interactAction.Invoke(); 
                 }
             }

@@ -66,7 +66,6 @@ public static class SaveSystem {
             Transform child = itemBp.transform.GetChild(i);
             ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
             if(item != null){
-                Debug.Log("Saving item body: " + item.item.name);
                 inventoryObjectData.AddItem(new GameObjectSaveData(child.gameObject));
             }
         }
@@ -75,7 +74,6 @@ public static class SaveSystem {
             Transform child = rightHand.transform.GetChild(i);
             ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
             if(item != null){
-                Debug.Log("Saving item right: " + item.item.name);
                 inventoryObjectData.AddRightHand(new GameObjectSaveData(child.gameObject));
             }
         }
@@ -84,17 +82,14 @@ public static class SaveSystem {
             Transform child = leftHand.transform.GetChild(i);
             ItemPickUp item = child.gameObject.GetComponent<ItemPickUp>();
             if(item != null){
-                Debug.Log("Saving item left: " + item.item.name);
                 inventoryObjectData.AddLeftHand(new GameObjectSaveData(child.gameObject));
             }
         }
 
         BinaryFormatter formatter = new BinaryFormatter();
         if(byScene == true){
-            Debug.Log("SAVING INVENTORY OBJECTS BY SCENE");
             path = Application.persistentDataPath + "/inventoryObjectsScene.data";
         }else{
-            Debug.Log("SAVING INVENTORY OBJECTS BY SAVE");
             path = Application.persistentDataPath + "/inventoryObjects.data";
         }
 

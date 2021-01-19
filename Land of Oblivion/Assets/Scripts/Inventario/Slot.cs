@@ -56,7 +56,7 @@ public class Slot: MonoBehaviour
 
     public void OnRemoveButton()
     {
-        EquipmentManager.instance.DropItem(item);
+        EquipmentManager.instance.DropItem(item, false);
         Inventario.instance.Remove(item);
     }
 

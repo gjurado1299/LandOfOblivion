@@ -15,7 +15,7 @@ public class EquipmentManager : MonoBehaviour
     {
         if(instance != null)
         {
-            //instance.UnEquipAll();
+            instance.reset = true;
             Destroy(this.gameObject);
             return;
         }
@@ -38,6 +38,7 @@ public class EquipmentManager : MonoBehaviour
     public OnEquipmentChanged onEquipmentChanged;
 
     public bool hasWeapon = false;
+    public bool reset = false;
 
     void Start ()
     {
@@ -53,18 +54,6 @@ public class EquipmentManager : MonoBehaviour
             weaponAnimationsDict.Add(a.weapon, a.clips);
         }
 
-    }
-
-    void ResetAllEquipment(){
-        // Ajuste de equipamiento para las animaciones de armas (un simple re-equipado al iniciar la escena)
-        for (int i = 0; i < currentEquipment.Length; i++)
-        {
-            Equipment current = currentEquipment[i];
-            if(current != null){
-                UnEquip(i);
-                Equip(current);
-            }
-        }
     }
 
     public void Equip (Equipment newItem)
@@ -208,9 +197,14 @@ public class EquipmentManager : MonoBehaviour
         }else{
             hasWeapon = false;
         }
+
+        if(reset == true && instance == this){
+            UnEquipAll();
+            reset = false;
+        }
     }
 
-    public void DropItem(Item item){
+    public void DropItem(Item item, bool destroy){
         GameObject havook = GameObject.Find("Havook");
         GameObject objectItem = null;
 
@@ -236,21 +230,25 @@ public class EquipmentManager : MonoBehaviour
             }
         }
 
-        // Darle parent = null
-        objectItem.transform.SetParent(null);
+        if(destroy == true){
+            Destroy(objectItem);
+        }else{
+            // Darle parent = null
+            objectItem.transform.SetParent(null);
 
-        // Darle posicion = havook
-        objectItem.transform.position = GameObject.FindWithTag("Player").transform.position + new Vector3(1, 1, 1);
+            // Darle posicion = havook
+            objectItem.transform.position = GameObject.FindWithTag("Player").transform.position + new Vector3(1, 1, 1);
 
-        // Activar rigidbody e interactable
-        objectItem.transform.GetChild(0).gameObject.SetActive(true);
-        objectItem.GetComponent<Rigidbody>().isKinematic = false;
+            // Activar rigidbody e interactable
+            objectItem.transform.GetChild(0).gameObject.SetActive(true);
+            objectItem.GetComponent<Rigidbody>().isKinematic = false;
 
-        objectItem.SetActive(true);
+            objectItem.SetActive(true);
 
-        // Deshacer progreso si el objeto es de una misión.
-        if(objectItem.transform.GetChild(0).gameObject.GetComponent<Interactable>().type == "missionObj"){
-            havook.GetComponent<Player>().quest.goal.currentAmount--;
+            // Deshacer progreso si el objeto es de una misión.
+            if(objectItem.transform.GetChild(0).gameObject.GetComponent<Interactable>().type == "missionObj"){
+                havook.GetComponent<Player>().quest.goal.currentAmount--;
+            }
         }
     }
 

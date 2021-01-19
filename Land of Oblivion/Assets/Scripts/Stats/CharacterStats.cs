@@ -92,6 +92,11 @@ public class CharacterStats : MonoBehaviour
         currentHealth = health;
     }
 
+    public bool GetBuffed(){
+        Debug.Log(buffed);
+        return buffed;
+    }
+
     public void IncreaseHealth(int increment){
         currentHealth += increment;
         if(currentHealth > maxHealth)

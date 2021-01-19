@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d6c017014f14c12a2ff766f1dc251c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e2f150d2cf964d1887b139dceea613f, type: 3}
   m_Name: Martillo de Bibury
   m_EditorClassIdentifier: 
   name: Martillo de Bibury
@@ -19,3 +19,8 @@ MonoBehaviour:
     Me la di\xF3 Harald tras ayudarle."
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
+  equipSlot: 3
+  armorModifier: 0
+  damageModifier: 30
+  speedModifier: 2
+  blockModifier: 0

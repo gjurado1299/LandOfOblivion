@@ -9,12 +9,13 @@ public class Consumable : Item
     public BuffType type;
     public int increment;
     public float time;
-    public GameObject destroyable;
     bool consumed = false;
 
     public override void Use()
     {
-        PlayerStats stats = GameObject.Find("Havook").GetComponent<PlayerStats>();
+        GameObject havook = GameObject.Find("Havook");
+        PlayerStats stats = havook.GetComponent<PlayerStats>();
+        GameObject bodyItems = GameObject.Find("Havook").transform.GetChild(1).GetChild(0).gameObject;
         base.Use();
 
         if(stats.isFullHealth() != true && type == BuffType.Health){
@@ -22,20 +23,15 @@ public class Consumable : Item
             consumed = true;
         }
 
-        if(type == BuffType.Damage && stats.buffed == false){
+        if(type == BuffType.Damage && stats.GetBuffed() == false){
             stats.IncreaseDamage(increment, time);
             consumed = true;
         }
 
         if(consumed == true){
-            if(destroyable != null){
-                Destroy(destroyable);
-            }else{
-                Debug.Log("DESTROYABLE ES NULL");
-                Debug.Log(destroyable);
-            }
-                
+            AudioManager.instance.Play("Potion");
             RemoveFromInventory();
+            EquipmentManager.instance.DropItem(this, true);
         }
     }
 }

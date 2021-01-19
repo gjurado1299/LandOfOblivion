@@ -30,4 +30,8 @@ public class Enemy : MonoBehaviour
     public void BossKilled(){
         player.GetComponent<Player>().quest.goal.EnemyKilled();
     }
+
+    public void Roar(){
+        AudioManager.instance.Play("Roar");
+    }
 }

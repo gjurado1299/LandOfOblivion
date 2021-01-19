@@ -23,14 +23,17 @@ public class Boss_walk : StateMachineBehaviour
         Vector3 target = new Vector3(player.position.x, rb.position.y, player.position.z); 
         Vector3 newP = Vector3.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 
-
         Vector3 direction = (player.position - rb.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         rb.rotation = Quaternion.Slerp(rb.rotation, lookRotation, Time.deltaTime * 5f);
-        rb.MovePosition(newP);
 
         if(Vector3.Distance(player.position, rb.position) <= stats.attackRange){
-            animator.SetTrigger("Attack");
+            if(player.GetComponent<PlayerStats>().dead == false)
+                animator.SetTrigger("Attack");
+            else
+                animator.SetBool("Moving", false);
+        }else{
+            rb.MovePosition(newP);
         }
 
     }

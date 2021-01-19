@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MainTheme
-    clip: {fileID: 8300000, guid: cd905dc2d8966264689e1df892224b81, type: 3}
+    clip: {fileID: 8300000, guid: a562d12ee31f0fb4d996d011b0caf266, type: 3}
     volume: 0.18
     pitch: 1
     loop: 1
@@ -147,7 +147,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: BossTheme
-    clip: {fileID: 8300000, guid: f2ca1c61b5cfde84487fd8e4b7b2b9ba, type: 3}
+    clip: {fileID: 8300000, guid: 94f27ad36118c0749b69a293d5c4de07, type: 3}
     volume: 0.06
     pitch: 1
     loop: 1
@@ -163,4 +163,34 @@ MonoBehaviour:
     volume: 0.06
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: Potion
+    clip: {fileID: 8300000, guid: 5e903c3ad4445da438cbd853583e366b, type: 3}
+    volume: 0.06
+    pitch: 2
+    loop: 0
+    source: {fileID: 0}
+  - name: Fortaleza
+    clip: {fileID: 8300000, guid: 4f4f09b92fa894f48982fd29b9637988, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Roar
+    clip: {fileID: 8300000, guid: 2173c2ee4783922438ead8f1eb1ecfd9, type: 3}
+    volume: 0.1
+    pitch: 1.7
+    loop: 0
+    source: {fileID: 0}
+  - name: Punch
+    clip: {fileID: 8300000, guid: a0b7484687ce8cd42802ddfb80f5ac88, type: 3}
+    volume: 0.06
+    pitch: 1.7
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordSwing
+    clip: {fileID: 8300000, guid: 6d7fde544f1c98449a08209dc61be3f5, type: 3}
+    volume: 0.06
+    pitch: 0.8
+    loop: 0
     source: {fileID: 0}

@@ -43,9 +43,9 @@ public class AudioManager : MonoBehaviour
         else if(index == 4)
             Play("TierrasPerdidas");
         else if(index == 5)
-            Play("InicioOleadas");
+            Play("Fortaleza");
         else if(index == 6)
-            Play("InicioOleadas");
+            Play("BossTheme");
         else if(index == 7)
             Play("Bibury");
         else if(index == 8)

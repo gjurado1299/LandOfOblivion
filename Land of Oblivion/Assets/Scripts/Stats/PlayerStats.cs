@@ -38,6 +38,7 @@ public class PlayerStats : CharacterStats
         this.gameObject.GetComponent<Animator>().SetTrigger("IsDead");
         gameManager.bloqueado = true;
         LoadedCheck.instance.died = true;
+        EquipmentManager.instance.reset = true;
 
         StartCoroutine(GameOverPanel());
     }
@@ -52,16 +53,16 @@ public class PlayerStats : CharacterStats
     }
 
     public void SetPlayerPrefs(){
-        armor.SetModifiers("Armor");
-        damage.SetModifiers("Damage");
-        attackSpeed.SetModifiers("SpeedAttack");
+        //armor.SetModifiers("Armor");
+        //damage.SetModifiers("Damage");
+        //attackSpeed.SetModifiers("SpeedAttack");
         base.setCurrentHealth(PlayerPrefs.GetInt("CurrentHealth", maxHealth));
     }
 
     public void SavePlayerPrefs(){
-        armor.SaveModifiers("Armor");
-        damage.SaveModifiers("Damage");
-        attackSpeed.SaveModifiers("SpeedAttack");
+        //armor.SaveModifiers("Armor");
+        //damage.SaveModifiers("Damage");
+        //attackSpeed.SaveModifiers("SpeedAttack");
         PlayerPrefs.SetInt("CurrentHealth", currentHealth);
     }
 

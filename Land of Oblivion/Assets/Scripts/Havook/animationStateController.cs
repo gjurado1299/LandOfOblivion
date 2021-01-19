@@ -100,4 +100,12 @@ public class animationStateController : MonoBehaviour
             animator.SetBool("PlayingBlock", false);
         }
     }
+
+    void PunchClip(){
+        AudioManager.instance.Play("Punch");
+    }
+
+    void SwordClip(){
+        AudioManager.instance.Play("SwordSwing");
+    }
 }
