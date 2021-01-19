@@ -15,6 +15,8 @@ public class EnemyController : MonoBehaviour
     CharacterCombat combat;
 
     CharacterStats stats;
+    CharacterStats targetStats;
+    bool pegando = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,10 +41,15 @@ public class EnemyController : MonoBehaviour
             
             if (distance <= agent.stoppingDistance){
 
-                CharacterStats targetStats = target.GetComponent<CharacterStats>();
-                if(targetStats != null && targetStats.dead == false){
+                targetStats = target.GetComponent<CharacterStats>();
+                if(combat.attackCooldown <= 0f && targetStats != null && targetStats.dead == false && pegando == false){
+                    if(gameObject.name == "Skeleton")
+                        pegando = true;
+                    else   
+                        combat.Attack(targetStats);
+                        
                     enemyAnimator.SetTrigger("Attack");
-                    combat.Attack(targetStats);
+                    
                 }
 
                 // Mirar al jugador
@@ -58,6 +65,7 @@ public class EnemyController : MonoBehaviour
         }else{
             enemyAnimator.SetBool("Walk", false);
         }
+
     }
 
     void FaceTarget(){
@@ -69,5 +77,13 @@ public class EnemyController : MonoBehaviour
     void OnDrawGizmosSelected(){
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    public void AttackTarget(){
+        combat.Attack(targetStats);
+    }
+
+    public void ResetPegando(){
+        pegando = false;
     }
 }

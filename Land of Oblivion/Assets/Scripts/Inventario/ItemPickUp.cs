@@ -6,7 +6,7 @@ public class ItemPickUp : MonoBehaviour
 {
     public Item item;
     public int bodyPart;
-    bool picked = false;
+    [HideInInspector] public bool picked = false;
     
     public void PickUp()
     {
@@ -41,8 +41,12 @@ public class ItemPickUp : MonoBehaviour
                 GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadLevelByIndex(2);
 
             }else if(gameObject.name == "Mithril" && picked == false){
+
                 Player player = GameObject.Find("Havook").GetComponent<Player>();
                 player.quest.completedText = "Vuelve con Harald";
+
+                // Asegurar que el contador esta actualizado
+                player.quest.goal.currentAmount = 1;
                 picked = true;
                 GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadLevelByIndex(4);
             }

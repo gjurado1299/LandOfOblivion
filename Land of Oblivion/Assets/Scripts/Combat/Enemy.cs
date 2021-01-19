@@ -34,4 +34,16 @@ public class Enemy : MonoBehaviour
     public void Roar(){
         AudioManager.instance.Play("Roar");
     }
+
+    public void BossSwing(){
+        AudioManager.instance.Play("BossSwing");
+    }
+
+    public void BossSmash(){
+        AudioManager.instance.Play("BossSmash");
+    }
+
+    public void BossDeath(){
+        AudioManager.instance.Play("BossDeath");
+    }
 }

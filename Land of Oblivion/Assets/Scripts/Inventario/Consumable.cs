@@ -32,6 +32,7 @@ public class Consumable : Item
             AudioManager.instance.Play("Potion");
             RemoveFromInventory();
             EquipmentManager.instance.DropItem(this, true);
+            consumed = false;
         }
     }
 }

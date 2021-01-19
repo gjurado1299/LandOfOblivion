@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4510917, g: 0.73026615, b: 0.99766463, a: 1}
+  m_IndirectSpecularColor: {r: 0.4510556, g: 0.7302519, b: 0.9976676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1441,12 +1441,12 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
+    m_Type: 2
+    m_Resolution: 3
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.5
     m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_NormalBias: 0
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -1491,13 +1491,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266684223}
-  m_LocalRotation: {x: 0.8354525, y: 0.031601883, z: 0.019339506, w: 0.54831237}
+  m_LocalRotation: {x: 0.87557137, y: 0.033010453, z: 0.016822774, w: 0.481666}
   m_LocalPosition: {x: 54.2, y: 14.4, z: 108.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 66.199005, y: 170.44801, z: 169.432}
+  m_LocalEulerAnglesHint: {x: 57.390003, y: 173.473, z: 172.106}
 --- !u!1 &276982579
 GameObject:
   m_ObjectHideFlags: 0
@@ -16591,6 +16591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
         type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1124529121}
@@ -16598,6 +16603,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HoverButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1124529121}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: AcceptQuest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e929d75a9c176b4b9046b233571dc2e, type: 3}

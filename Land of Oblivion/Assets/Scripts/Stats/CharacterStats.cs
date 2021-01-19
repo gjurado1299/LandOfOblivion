@@ -63,7 +63,7 @@ public class CharacterStats : MonoBehaviour
         if(gameObject.name != "Havook" || animator.GetCurrentAnimatorStateInfo(0).IsName("Stand To Roll") == false){
 
             // Al integrar armadura hay que corregir esta expresion
-            damage -= damage * (armor.GetValue()/100);
+            // damage -= damage * (armor.GetValue()/100);
 
             if(blocking){
                 damage = (int)((double) damage - damage * block.GetValue()/100);

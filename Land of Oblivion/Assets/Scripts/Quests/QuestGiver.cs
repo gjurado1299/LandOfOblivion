@@ -37,6 +37,8 @@ public class QuestGiver : MonoBehaviour
     }
 
     public void OpenRewardWindow(){
+        AudioManager.instance.Play("QuestCompleted");
+
         // Mostrar panel con info actualizada
         rewardWindow.SetActive(true);
         titleTextReward.text = quest.title;

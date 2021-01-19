@@ -30,11 +30,15 @@ public class Player : MonoBehaviour
         if(LoadedCheck.instance != null){
             if(LoadedCheck.instance.loaded == true){
                 LoadPlayer(true);
-
-                if(SceneManager.GetActiveScene().buildIndex == 3 && quest.started == true)
+                int index = SceneManager.GetActiveScene().buildIndex;
+                if(index == 3 && quest.started == true)
                     GameObject.Find("WaveManager").GetComponent<WaveManager>().AdjustSceneOnLoad(quest);
 
+                if(index == 1)
+                    LoadedCheck.instance.skipDialogue = true;
+                    
                 LoadedCheck.instance.loaded = false;
+
             }else if(LoadedCheck.instance.died == true){
                 LoadPlayer(false);
                 LoadedCheck.instance.died = false;
@@ -182,12 +186,12 @@ public class Player : MonoBehaviour
                 }
             }
 
-            Debug.Log(obj.id);
             GameObject item = Instantiate(Resources.Load("Props/"+obj.id)) as GameObject;
             item.name = obj.id;
             item.transform.SetParent(bodyItems.transform);
 
-            Item itemPick = item.GetComponent<ItemPickUp>().item;
+            ItemPickUp iP = item.GetComponent<ItemPickUp>();
+            Item itemPick = iP.item;
 
             item.transform.GetChild(0).gameObject.SetActive(false);
             item.GetComponent<Rigidbody>().isKinematic = true;
@@ -201,6 +205,7 @@ public class Player : MonoBehaviour
                 item.transform.localScale = new Vector3((item.transform.localScale.x*2/3), (item.transform.localScale.y*2/3), (item.transform.localScale.z*2/3));
             }
 
+            iP.picked = true;
             Inventario.instance.Add(itemPick);
         }
 

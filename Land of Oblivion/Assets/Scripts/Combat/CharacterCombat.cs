@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterCombat : MonoBehaviour
 {
     CharacterStats myStats;
-    private float attackCooldown = 0f;
+    public float attackCooldown = 0f;
     const float combatCooldown = 5;
     float lastAttackTime;
 
@@ -22,7 +22,8 @@ public class CharacterCombat : MonoBehaviour
     }
 
     void Update(){
-        attackCooldown -= Time.deltaTime;
+        if(attackCooldown > 0 || gameObject.name != "Skeleton")
+            attackCooldown -= Time.deltaTime;
 
         if(Time.time - lastAttackTime > combatCooldown || myStats.dead == true)
             InCombat = false;

@@ -63,7 +63,13 @@ public class DialogueManager : MonoBehaviour
         foreach(string name in dialogue.names){
             names.Enqueue(name);
         }
-        DisplayNextDialogue();
+
+        if(LoadedCheck.instance.skipDialogue == true){
+            EndDialogue();
+            LoadedCheck.instance.skipDialogue = false;
+        }else{
+            DisplayNextDialogue();
+        }
     }
 
     public void DisplayNextDialogue(){

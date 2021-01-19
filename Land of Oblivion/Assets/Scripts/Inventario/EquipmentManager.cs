@@ -247,7 +247,10 @@ public class EquipmentManager : MonoBehaviour
 
             // Deshacer progreso si el objeto es de una misión.
             if(objectItem.transform.GetChild(0).gameObject.GetComponent<Interactable>().type == "missionObj"){
-                havook.GetComponent<Player>().quest.goal.currentAmount--;
+                QuestGoal goal = havook.GetComponent<Player>().quest.goal;
+                
+                if(goal.goalType == GoalType.Gathering)
+                    goal.currentAmount--;
             }
         }
     }

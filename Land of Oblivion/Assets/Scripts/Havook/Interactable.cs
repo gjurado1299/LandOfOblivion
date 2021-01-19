@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
@@ -124,9 +125,23 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision){
         if(collision.gameObject.CompareTag("Player")){
+
             if(type != "missionObj" || jugadorScript.quest.isActive ){
                 isInRange = true;
                 if(type != "enemy"){
+                    if(UIPanel == null){
+                        if(type == "dialogo")
+                            UIPanel = GameObject.Find("TalkUI");
+                        else{
+                            UIPanel = GameObject.Find("PickUpUI");
+                        }
+                            
+                    }
+
+                    if(type == "door"){
+                        UIPanel.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "Pulsa E para abrir";
+                    }
+
                     UIPanel.GetComponent<CanvasGroup>().alpha = 1;
                 }else{
                     movimientoJugador.SetFocus(this.gameObject);

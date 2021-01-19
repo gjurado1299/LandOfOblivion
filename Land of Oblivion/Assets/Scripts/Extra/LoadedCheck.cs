@@ -6,6 +6,7 @@ public class LoadedCheck : MonoBehaviour
 {
     public bool loaded = false;
     public bool died = false;
+    public bool skipDialogue = false;
 
     #region Singleton
     public static LoadedCheck instance;

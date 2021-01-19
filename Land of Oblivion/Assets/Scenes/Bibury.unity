@@ -4621,7 +4621,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522811750}
-  m_LocalRotation: {x: 0.20480895, y: -0.01672492, z: 0.003500131, w: 0.9786529}
+  m_LocalRotation: {x: 0.20480633, y: -0.017447917, z: 0.0036514378, w: 0.9786402}
   m_LocalPosition: {x: 90.54, y: 26.95, z: 50.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7066,7 +7066,8 @@ PrefabInstance:
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.firstDialogue.sentences.Array.data[19]
-      value: Mucha suerte.
+      value: "Mucha suerte. Un consejo, Havook, recuerda que podr\xE1s esquivar los
+        ataques de enemigos. (Pulsa R para esquivar)"
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
@@ -7267,7 +7268,9 @@ PrefabInstance:
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
       propertyPath: quest.dialogueTrigger.endingDialogue.sentences.Array.data[6]
-      value: "No tan deprisa. Ten, te vendr\xE1 bien un escudo."
+      value: "No tan deprisa. Ten, te vendr\xE1 bien un escudo, usalo para bloquear
+        los ataques de los enemigos, y reducir el da\xF1o. (Mantener click derecho
+        para bloquear)"
       objectReference: {fileID: 0}
     - target: {fileID: 2886129034198321379, guid: 85353b2b890131e41be26778fbb690e9,
         type: 3}
@@ -10838,27 +10841,27 @@ PrefabInstance:
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20480894
+      value: 0.2048063
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0035000637
+      value: 0.0036513694
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.016724903
+      value: -0.017447898
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823109182498, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9786529
+      value: 0.97864026
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004237495
+      value: -0.0000000046022355
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -10873,12 +10876,12 @@ PrefabInstance:
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.22975291
+      value: 0.22975293
       objectReference: {fileID: 0}
     - target: {fileID: 7398823823957979521, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018679657
+      value: 0.000000018765759
       objectReference: {fileID: 0}
     - target: {fileID: 7398823824547757384, guid: 505023da209fd3545be1f4902bc0872a,
         type: 3}
@@ -15758,22 +15761,52 @@ PrefabInstance:
     - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1035826075}
     - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: HoverButton
       objectReference: {fileID: 0}
     - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 1035826075}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206640391928865764, guid: 2e929d75a9c176b4b9046b233571dc2e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: AcceptQuest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e929d75a9c176b4b9046b233571dc2e, type: 3}
